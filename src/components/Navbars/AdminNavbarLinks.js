@@ -14,7 +14,7 @@ export default function AdminNavbarLinks() {
   return (
     <div>
       <div className={classes.linkText}>
-        <a href="#">Acesso Restrito</a>
+        <a href="/user">Acesso Restrito</a>
       </div>
     </div>
   );
