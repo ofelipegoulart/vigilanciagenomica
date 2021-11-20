@@ -23,9 +23,6 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 
-import bgImage from "assets/img/sidebar-2.jpg";
-import logo from "assets/img/reactlogo.png";
-
 let ps;
 
 const switchRoutes = (
