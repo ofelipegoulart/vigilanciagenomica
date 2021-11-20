@@ -20,26 +20,23 @@ import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
+import Dashboard from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
-
 const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Início",
-    rtlName: "لوحة القيادة",
     icon: "home",
-    component: DashboardPage,
+    component: Dashboard,
     layout: "/admin",
   },
   {
     path: "/user",
     name: "Painel SC",
-    rtlName: "ملف تعريفي للمستخدم",
     icon: "bar_chart",
     component: UserProfile,
     layout: "/admin",
@@ -47,7 +44,6 @@ const dashboardRoutes = [
   {
     path: "/table",
     name: "Perfil das Variantes",
-    rtlName: "قائمة الجدول",
     icon: "coronavirus",
     component: TableList,
     layout: "/admin",
@@ -55,7 +51,6 @@ const dashboardRoutes = [
   {
     path: "/maps",
     name: "Mapa",
-    rtlName: "خرائط",
     icon: LocationOn,
     component: Maps,
     layout: "/admin",
@@ -63,7 +58,6 @@ const dashboardRoutes = [
   {
     path: "/typography",
     name: "Exemplo",
-    rtlName: "طباعة",
     icon: BubbleChart,
     component: Typography,
     layout: "/admin",
@@ -71,7 +65,6 @@ const dashboardRoutes = [
   {
     path: "/icons",
     name: "Sobre o Projeto",
-    rtlName: "الرموز",
     icon: LibraryBooks,
     component: Icons,
     layout: "/admin",
