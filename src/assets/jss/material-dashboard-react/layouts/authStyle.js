@@ -11,10 +11,10 @@ const appStyle = (theme) => ({
     height: "100vh",
   },
   mainPanel: {
-    marginTop: "250px",
+    marginTop: "200px",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "20%",
+    width: "320px",
     paddingBottom: "20px",
     background: "#fff",
   },
