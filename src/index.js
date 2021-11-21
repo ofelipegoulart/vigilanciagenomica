@@ -28,9 +28,9 @@ import "assets/css/material-dashboard-react.css?v=1.10.0";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/admin" component={Admin} />
+      <Route path="/dashboard" component={Admin} />
       <Route path="/user" component={Auth} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Redirect from="/" to="/dashboard/inicio" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

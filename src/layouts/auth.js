@@ -23,6 +23,7 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 
+
 let ps;
 
 const switchRoutes = (
