@@ -28,46 +28,46 @@ import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 const dashboardRoutes = [
   {
-    path: "/dashboard",
+    path: "/inicio",
     name: "Início",
     icon: "home",
     component: Dashboard,
-    layout: "/admin",
+    layout: "/dashboard",
   },
   {
-    path: "/user",
+    path: "/painelSC",
     name: "Painel SC",
     icon: "bar_chart",
     component: UserProfile,
-    layout: "/admin",
+    layout: "/dashboard",
   },
   {
-    path: "/table",
+    path: "/perfil-variantes",
     name: "Perfil das Variantes",
     icon: "coronavirus",
     component: TableList,
-    layout: "/admin",
+    layout: "/dashboard",
   },
   {
-    path: "/maps",
+    path: "/mapa",
     name: "Mapa",
     icon: LocationOn,
     component: Maps,
-    layout: "/admin",
+    layout: "/dashboard",
   },
   {
-    path: "/typography",
+    path: "/exemplo",
     name: "Exemplo",
     icon: BubbleChart,
     component: Typography,
-    layout: "/admin",
+    layout: "/dashboard",
   },
   {
-    path: "/icons",
+    path: "/sobre",
     name: "Sobre o Projeto",
     icon: LibraryBooks,
     component: Icons,
-    layout: "/admin",
+    layout: "/dashboard",
   },
 ];
 
