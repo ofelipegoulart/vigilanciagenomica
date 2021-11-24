@@ -1,7 +1,7 @@
 {
   "name": "Rede de Vigilância Genômica COVID-19",
   "authors": [
-    "creative-tim"
+    "Rede de Vigilância Genômica"
   ],
   "description": "Dashboard da Rede de Vigilância Genômica da COVID-19",
   "main": "public/index.html",

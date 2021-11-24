@@ -63,5 +63,5 @@
     ],
     "development": []
   },
-  "proxy": "https://vigilanciagenomica-backend.herokuapp.com/api/"
+  "proxy": "https://vigilanciagenomica-backend.herokuapp.com/api/",
 }
