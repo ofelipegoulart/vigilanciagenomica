@@ -1,21 +1,13 @@
 {
-  "name": "material-dashboard-react",
-  "homepage": "https://github.com/creativetimofficial/material-dashboard-react",
+  "name": "Rede de Vigilância Genômica COVID-19",
   "authors": [
     "creative-tim"
   ],
-  "description": "A Badass Material-UI Kit based on Material Design",
+  "description": "Dashboard da Rede de Vigilância Genômica da COVID-19",
   "main": "public/index.html",
   "keywords": [
-    "material",
-    "design",
-    "material-ui",
-    "material",
-    "design",
-    "google",
-    "twitter"
   ],
-  "license": "Creative TIM License",
+  "license": "Rede de Vigilância Genômica",
   "ignore": [
     "**/.*",
     "node_modules",

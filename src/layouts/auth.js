@@ -1,76 +1,125 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-// creates a beautiful scrollbar
-import PerfectScrollbar from "perfect-scrollbar";
-import "perfect-scrollbar/css/perfect-scrollbar.css";
-// @material-ui/core components
+import axios from 'axios';
+import { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-// core components
-import Navbar from "components/Navbars/Navbar.js";
-import Footer from "components/Footer/Footer.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
-import Grid from "@material-ui/core/Grid";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Button from "components/CustomButtons/Button.js";
-// @material-ui/icons
-import People from "@material-ui/icons/People";
-//core components
-import CustomInput from "components/CustomInput/CustomInput.js";
-import GridItem from "components/Grid/GridItem.js";
-
-import routes from "routes.js";
-
+import jwt_decode from 'jwt-decode';
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 
 
-let ps;
-
-const switchRoutes = (
-  <Switch>
-    {routes.map((prop, key) => {
-      if (prop.layout === "/auth") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      }
-      return null;
-    })}
-    <Redirect from="/auth" to="/auth" />
-  </Switch>
-);
-
 const useStyles = makeStyles(styles);
 
+function App() {
 
-export default function Auth({ ...rest }) {
   const classes = useStyles();
-  return (
-    <Grid className={classes.mainPanel}>
-  <GridItem xs={12} sm={12} md={4}>
-    <CustomInput
-      labelText="Usuário"
-      id="float"
-      formControlProps={{
-        fullWidth: false
-      }}
-    />
-  </GridItem>
-  <GridItem xs={12} sm={12} md={4}>
-    <CustomInput
-      labelText="Senha"
-      id="float"
-      formControlProps={{
-        fullWidth: false
-      }}
-    />
-  </GridItem>
-  <Button type="button" color="info" className={classes.submitButton}>Entrar</Button>
-</Grid>
 
+  const [user, setUser] = useState(null);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const refreshToken = async () => {
+    try {
+      const res = await axios.post("/refresh", { token: user.refreshToken });
+      setUser({
+        ...user,
+        accessToken: res.data.accessToken,
+        refreshToken: res.data.refreshToken,
+      });
+      return res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const axiosJWT = axios.create()
+
+  axiosJWT.interceptors.request.use(
+    async (config) => {
+      let currentDate = new Date();
+      const decodedToken = jwt_decode(user.accessToken);
+      if (decodedToken.exp * 1000 < currentDate.getTime()) {
+        const data = await refreshToken();
+        config.headers["authorization"] = "Bearer " + data.accessToken;
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("/login", { username, password });
+      setUser(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    setSuccess(false);
+    setError(false);
+    try {
+      await axiosJWT.delete("/users/" + id, {
+        headers: { authorization: "Bearer " + user.accessToken },
+      });
+      setSuccess(true);
+    } catch (err) {
+      setError(true);
+    }
+  };
+
+  return (
+    <div className={classes.mainPanel}>
+      {user ? ( // private route
+        <div className="home">
+          <span>
+            Welcome to the <b>{user.isAdmin ? "admin" : "user"}</b> dashboard{" "}
+            <b>{user.username}</b>.
+          </span>
+          <span>Delete Users:</span>
+          <button className="deleteButton" onClick={() => handleDelete(1)}>
+            Delete John
+          </button>
+          <button className="deleteButton" onClick={() => handleDelete(2)}>
+            Delete Jane
+          </button>
+          {error && (
+            <span className="error">
+              You are not allowed to delete this user!
+            </span>
+          )}
+          {success && (
+            <span className="success">
+              User has been deleted successfully...
+            </span>
+          )}
+        </div>
+      ) : (
+        <div className={classes.mainPanel}>
+          <form onSubmit={handleSubmit}>
+          <label>Usuário</label>
+            <input
+              type="text"
+              placeholder="username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <label>Senha</label>
+            <input
+              type="password"
+              placeholder="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit" className={classes.submitButton}>
+              Login
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
   );
 }
+
+export default App;
