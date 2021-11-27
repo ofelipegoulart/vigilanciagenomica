@@ -7,53 +7,54 @@ import Dashboard from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
+import Tutorial from "PrivateViews/Tutorial/Tutorial.js";
 import Maps from "views/Maps/Maps.js";
 
 
 const dashboardRoutes = [
   {
-    path: "/inicio",
-    name: "Início",
+    path: "/tutorial",
+    name: "Como usar?",
     icon: "home",
+    component: Tutorial,
+    layout: "/user",
+  },
+  {
+    path: "/submeter-CSV",
+    name: "CSV Metadados",
+    icon: "upload_file",
     component: Dashboard,
-    layout: "/dashboard",
+    layout: "/user",
   },
   {
-    path: "/painelSC",
-    name: "Painel SC",
-    icon: "bar_chart",
+    path: "/registro-extracao",
+    name: "Extração",
+    icon: "colorize",
     component: UserProfile,
-    layout: "/dashboard",
+    layout: "/user",
   },
   {
-    path: "/perfil-variantes",
-    name: "Perfil das Variantes",
-    icon: "coronavirus",
+    path: "/registro-sequenciamento",
+    name: "Sequenciamento",
+    icon: "biotech",
     component: TableList,
-    layout: "/dashboard",
+    layout: "/user",
   },
   {
-    path: "/mapa",
-    name: "Mapa",
-    icon: LocationOn,
+    path: "/registro-analise",
+    name: "Análise",
+    icon: "search",
     component: Maps,
-    layout: "/dashboard",
+    layout: "/user",
   },
   {
-    path: "/exemplo",
-    name: "Exemplo",
-    icon: BubbleChart,
+    path: "/liberacao-resultados",
+    name: "Liberação de Resultados",
+    icon: "done",
     component: Typography,
-    layout: "/dashboard",
+    layout: "/user",
   },
-  {
-    path: "/sobre",
-    name: "Sobre o Projeto",
-    icon: LibraryBooks,
-    component: Icons,
-    layout: "/dashboard",
-  },
+
 ];
 
 export default dashboardRoutes;

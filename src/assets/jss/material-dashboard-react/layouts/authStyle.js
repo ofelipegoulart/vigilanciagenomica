@@ -8,6 +8,7 @@ import {
   infoColor,
   blackColor,
   hexToRgb,
+  grayColor,
 } from "assets/jss/material-dashboard-react.js";
 
 const appStyle = (theme) => ({
@@ -17,17 +18,49 @@ const appStyle = (theme) => ({
     height: "100vh",
   },
   mainPanel: {
-    marginTop: "200px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "320px",
-    paddingBottom: "20px",
-    background: "#fff",
+    [theme.breakpoints.up("md")]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+    },
+    overflow: "auto",
+    position: "relative",
+    float: "right",
+    ...transition,
+    maxHeight: "100%",
+    width: "100%",
+    overflowScrolling: "touch",
   },
   content: {
     marginTop: "70px",
     padding: "30px 15px",
     minHeight: "calc(100vh - 123px)",
+  },
+  container,
+  map: {
+    marginTop: "70px",
+  },
+  card: {
+    height: "370px",
+    margin: "120px auto",
+    width: "400px",
+    backgroundColor: " rgba(196, 196, 196, 0.33) !important",
+  },
+  formTitle: {
+    display: "flex",
+    justifyContent: "space-between",
+    fontSize: "28px",
+    paddingTop: "40px",
+    paddingLeft: "120px",
+  },
+  formSignIn: {
+    textAlign:"center",
+    margin:"auto",
+  },
+  underline: {
+    display:"flex",
+    marginLeft:"100px",
+    width: "200px",
+    height: "30px",
+    border:"0",
   },
   submitButton: {
     textAlign: "center",
@@ -70,6 +103,7 @@ const appStyle = (theme) => ({
   map: {
     marginTop: "70px",
   },
-});
+}
+);
 
 export default appStyle;
