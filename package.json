@@ -63,5 +63,6 @@
       "not op_mini all"
     ],
     "development": []
-  }
+  },
+  "proxy": "https://vigilanciagenomica-backend.herokuapp.com/api"
 }
