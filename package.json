@@ -23,7 +23,7 @@
     "react-swipeable-views": "0.13.9"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_PATH=./src npm-run-all -p watch-css start-js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
