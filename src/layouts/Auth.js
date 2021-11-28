@@ -6,6 +6,7 @@ import jwt_decode from 'jwt-decode';
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 import sidebarStyles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import api from "../api.js";
 
 import privateroutes from "privateRoutes.js";
 
