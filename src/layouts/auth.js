@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios';
-import api from "../services/api.js";
 import { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import jwt_decode from 'jwt-decode';
@@ -62,7 +61,7 @@ export default function App( { ...rest } ) {
 
   const refreshToken = async () => {
     try {
-      const res = await api.post("/refresh", { token: user.refreshToken });
+      const res = await axios.post("/refresh", { token: user.refreshToken });
       setUser({
         ...user,
         accessToken: res.data.accessToken,
@@ -74,7 +73,7 @@ export default function App( { ...rest } ) {
     }
   };
 
-  const axiosJWT = api.create()
+  const axiosJWT = axios.create()
 
   axiosJWT.interceptors.request.use(
     async (config) => {
@@ -94,7 +93,7 @@ export default function App( { ...rest } ) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("/login", { username, password });
+      const res = await axios.post("/login", { username, password });
       setUser(res.data);
     } catch (err) {
       console.log(err);
