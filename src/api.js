@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwt_decode from 'jwt-decode';
 
 const axiosJWT = axios.create({
   baseURL: process.env.REACT_APP_API_URL
