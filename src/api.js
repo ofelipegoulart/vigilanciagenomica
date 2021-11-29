@@ -1,6 +1,5 @@
 import axios from "axios";
-require("dotenv").config();
-const process = require('process');
+require('dotenv').config()
 
 
 const axiosJWT = axios.create({
