@@ -1,5 +1,4 @@
 import React from "react";
-import axios from 'axios';
 import { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import jwt_decode from 'jwt-decode';
@@ -35,12 +34,14 @@ export default function App( { ...rest } ) {
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const handleImageClick = (image) => {
     setImage(image);
   };
   const handleColorClick = (color) => {
     setColor(color);
   };
+
   const handleFixedClick = () => {
     if (fixedClasses === "dropdown") {
       setFixedClasses("dropdown show");
@@ -48,69 +49,24 @@ export default function App( { ...rest } ) {
       setFixedClasses("dropdown");
     }
   };
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const getRoute = () => {
-    return window.location.pathname !== "/admin/maps";
-  };
+
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
       setMobileOpen(false);
     }
   };
 
-  const refreshToken = async () => {
-    try {
-      const res = await axios.post("/refresh", { token: user.refreshToken });
-      setUser({
-        ...user,
-        accessToken: res.data.accessToken,
-        refreshToken: res.data.refreshToken,
-      });
-      return res.data;
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const axiosJWT = axios.create()
-
-  axiosJWT.interceptors.request.use(
-    async (config) => {
-      let currentDate = new Date();
-      const decodedToken = jwt_decode(user.accessToken);
-      if (decodedToken.exp * 1000 < currentDate.getTime()) {
-        const data = await refreshToken();
-        config.headers["authorization"] = "Bearer " + data.accessToken;
-      }
-      return config;
-    },
-    (error) => {
-      return Promise.reject(error);
-    }
-  );
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/login", { username, password });
-      setUser(res.data);
+      const res = await api.post("/login", { username, password });
+      localStorage.setItem('@rvg:token', res.data.accessToken)
     } catch (err) {
       console.log(err);
-    }
-  };
-
-  const handleDelete = async (id) => {
-    setSuccess(false);
-    setError(false);
-    try {
-      await axiosJWT.delete("/users/" + id, {
-        headers: { authorization: "Bearer " + user.accessToken },
-      });
-      setSuccess(true);
-    } catch (err) {
-      setError(true);
     }
   };
 
@@ -134,7 +90,7 @@ export default function App( { ...rest } ) {
 
   return (
     <div>
-      {user ? (
+      {localStorage.getItem('@rvg:token') ? (
         <div className={classes.mainPanel}>
         <Sidebar
           routes={privateroutes}
@@ -146,16 +102,10 @@ export default function App( { ...rest } ) {
           color={color}
           {...rest}
         />
-          {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-          {getRoute() ? (
-            <div className={classes.content}>
-              <div className={classes.container}>{switchRoutes}</div>
-            </div>
-          ) : (
-            <div className={classes.map}>{switchRoutes}</div>
-          )}
+          <div className={classes.content}>
+            <div className={classes.container}>{switchRoutes}</div>
+          </div>
         </div>
-
       ) : (
         <div className={classes.card}>
           <form onSubmit={handleSubmit} className={classes.formSignIn}>
