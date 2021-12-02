@@ -20,7 +20,7 @@ export default function Icons() {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
-          <CardHeader plain color="primary">
+          <CardHeader plain color="info">
             <h1>Sobre o Projeto</h1>
           </CardHeader>
           <CardBody>
