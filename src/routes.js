@@ -8,7 +8,7 @@ import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Relatorios from "views/Relatorios/Icons.js";
-import Icons from "views/Icons/Icons.js";
+import Sobre from "views/Sobre/Sobre.js";
 import Maps from "views/Maps/Maps.js";
 
 
@@ -52,7 +52,7 @@ const dashboardRoutes = [
     path: "/sobre",
     name: "Sobre o Projeto",
     icon: "info",
-    component: Icons,
+    component: Sobre,
     layout: "/dashboard",
   },
 ];

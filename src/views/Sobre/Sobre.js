@@ -24,8 +24,13 @@ export default function Icons() {
             <h1>Sobre o Projeto</h1>
           </CardHeader>
           <CardBody>
-            <p> <b>Exemplo de relatório:</b> <a href="https://vigilanciagenomica.herokuapp.com/dashboard/relatorios/#"> Link de exemplo [em PDF] </a>
- </p>
+            <p>
+
+A Rede de Vigilância Genômica é um projeto que visa sequenciar e caracterizar as variantes do SARS-CoV-2 circulantes quanto as características genéticas,
+dispersão e relação aos genótipos, fatores de risco ou programático ou de prognóstico, e de prevalência das VOC (Variantes de Preocupação) e das VOI
+(Variantes de Interesse), e associadas a eventos considerados inusitados ou sentinelas, como reinfecções, casos graves ou óbitos em pacientes sem comorbidades,
+óbitos em gestantes, suspeitas de falhas vacinais (casos graves e óbitos), casos em pacientes com histórico de viagem para locais com circulação de nova VOI ou
+VOCs e seus contatos e casos relacionados a surtos. </p>
           </CardBody>
         </Card>
       </GridItem>
