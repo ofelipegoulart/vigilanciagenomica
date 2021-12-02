@@ -21,7 +21,7 @@ export default function Icons() {
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
           <CardHeader plain color="primary">
-            <h1>Sobre o Projeto</h1>
+            <h1>Relatórios</h1>
           </CardHeader>
           <CardBody>
             <p> <b>Exemplo de relatório:</b> <a href="https://vigilanciagenomica.herokuapp.com/dashboard/relatorios/#"> Link de exemplo [em PDF] </a>
