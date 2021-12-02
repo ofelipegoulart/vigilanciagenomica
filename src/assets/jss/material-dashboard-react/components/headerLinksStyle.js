@@ -29,8 +29,17 @@ const headerLinksStyle = (theme) => ({
   linkText: {
     zIndex: "4",
     ...defaultFont,
-    fontSize: "14px",
-    margin: "0px",
+    marginTop: "15px",
+    fontSize: "14.5px",
+    lineHeight:"1.2px",
+    float: "right",
+  },
+  update: {
+    zIndex: "4",
+    ...defaultFont,
+    marginTop: "16px",    
+    fontSize: "13px",
+    lineHeight:"1.2px",
   },
   buttonLink: {
     [theme.breakpoints.down("sm")]: {

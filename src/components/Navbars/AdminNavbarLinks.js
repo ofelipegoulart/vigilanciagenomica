@@ -13,9 +13,8 @@ export default function AdminNavbarLinks() {
 
   return (
     <div>
-      <div className={classes.linkText}>
-        <a href="/user">Acesso Restrito</a>
+    <a href="/user" className={classes.linkText}>Acesso Restrito</a><br></br>
+    <span className={classes.update}>Última Atualização: 02/12/2021 às 12:25</span>
       </div>
-    </div>
   );
 }
