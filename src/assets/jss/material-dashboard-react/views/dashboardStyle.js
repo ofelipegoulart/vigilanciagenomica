@@ -77,6 +77,9 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
+  spacing: {
+    paddingBottom: "10px",
+  },
 };
 
 export default dashboardStyle;
