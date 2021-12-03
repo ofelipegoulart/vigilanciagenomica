@@ -9,6 +9,7 @@ import {
   dangerColor,
   whiteColor,
   grayColor,
+  dashboardColor,
 } from "assets/jss/material-dashboard-react.js";
 
 const headerStyle = () => ({
@@ -75,6 +76,11 @@ const headerStyle = () => ({
   danger: {
     backgroundColor: dangerColor[0],
     color: whiteColor,
+    ...defaultBoxShadow,
+  },
+  dashboard: {
+    backgroundColor: dashboardColor[0],
+    color: dashboardColor,
     ...defaultBoxShadow,
   },
 });

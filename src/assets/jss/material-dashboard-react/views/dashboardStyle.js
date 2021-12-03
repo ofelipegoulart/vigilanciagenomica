@@ -35,12 +35,13 @@ const dashboardStyle = {
     },
   },
   cardCategory: {
-    color: grayColor[0],
+    color: grayColor[2],
     margin: "0",
     fontSize: "14px",
     marginTop: "0",
     paddingTop: "10px",
     marginBottom: "0",
+    fontWeight: "300",
   },
   cardCategoryWhite: {
     color: "rgba(" + hexToRgb(whiteColor) + ",.62)",
@@ -65,11 +66,11 @@ const dashboardStyle = {
   },
   cardTitleWhite: {
     color: whiteColor,
-    marginTop: "0px",
+    marginTop: "5px",
     minHeight: "auto",
     fontWeight: "300",
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
+    marginBottom: "5px",
     textDecoration: "none",
     "& small": {
       color: grayColor[1],

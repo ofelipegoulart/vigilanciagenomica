@@ -100,6 +100,17 @@ export default function Dashboard() {
       </GridContainer>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
+          <div className={classes.spacing}>&nbsp;
+          </div>
+          <CardHeader color="info">
+            <h3 className={classes.cardTitleWhite}>Variantes Reportadas</h3>
+          </CardHeader>
+            <CardBody>
+            </CardBody>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
           <Card chart>
             <CardHeader color="success">
               <ChartistGraph
