@@ -12,7 +12,7 @@ export default function AdminNavbarLinks() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.navbarLinksContainer}>
     <a href="/user" className={classes.linkText}>Acesso Restrito</a><br></br>
     <span className={classes.update}>Última Atualização: 02/12/2021 às 12:25</span>
       </div>

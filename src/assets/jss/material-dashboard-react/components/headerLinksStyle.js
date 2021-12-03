@@ -37,7 +37,7 @@ const headerLinksStyle = (theme) => ({
   update: {
     zIndex: "4",
     ...defaultFont,
-    marginTop: "16px",    
+    marginTop: "16px",
     fontSize: "13px",
     lineHeight:"1.2px",
   },
@@ -117,6 +117,14 @@ const headerLinksStyle = (theme) => ({
       margin: "10px 15px 0",
     },
     display: "inline-block",
+  },
+  "@media (min-width: 320px) and (max-width:1024px)": {
+    navbarLinksContainer: {
+      marginTop: "4px",
+      width: "95%",
+      textAlign: "right",
+      color:"white ! important",
+    }
   },
 });
 
