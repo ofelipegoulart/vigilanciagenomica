@@ -1,16 +1,11 @@
 import { BrowserRouter, Router, Switch, Redirect } from "react-router-dom";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
-import Dashboard from "PrivateViews/Dashboard/Dashboard.js";
-import CSVMetadados from "PrivateViews/CSVmetadados/CSVmetadados.js";
-import UserProfile from "PrivateViews/UserProfile/UserProfile.js";
-import TableList from "PrivateViews/TableList/TableList.js";
-import Typography from "PrivateViews/Typography/Typography.js";
 import Tutorial from "PrivateViews/Tutorial/Tutorial.js";
-import Maps from "PrivateViews/Maps/Maps.js";
-
+import CSVMetadados from "PrivateViews/CSVmetadados/CSVmetadados.js";
+import Extração from "PrivateViews/Extracao/Extracao.js";
+import Sequenciamento from "PrivateViews/Sequenciamento/Sequenciamento.js";
+import Análise from "PrivateViews/Analise/Analise.js";
+import Liberação from "PrivateViews/Liberacao/Liberacao.js";
 
 const dashboardRoutes = [
   {
@@ -31,28 +26,28 @@ const dashboardRoutes = [
     path: "/registro-extracao",
     name: "Extração",
     icon: "colorize",
-    component: UserProfile,
+    component: Extração,
     layout: "/user",
   },
   {
     path: "/registro-sequenciamento",
     name: "Sequenciamento",
     icon: "biotech",
-    component: TableList,
+    component: Sequenciamento,
     layout: "/user",
   },
   {
     path: "/registro-analise",
     name: "Análise",
     icon: "search",
-    component: Maps,
+    component: Análise,
     layout: "/user",
   },
   {
     path: "/liberacao-resultados",
     name: "Liberação de Resultados",
     icon: "done",
-    component: Typography,
+    component: Liberação,
     layout: "/user",
   },
 
