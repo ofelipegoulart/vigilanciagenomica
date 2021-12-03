@@ -8,7 +8,7 @@ import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 import jwt_decode from 'jwt-decode';
 import api from "../api.js";
 
-import Sidebar from "components/Sidebar/Sidebar.js";
+import Sidebar from "components/PrivateSidebar/Sidebar.js";
 import privateroutes from "privateRoutes.js";
 
 import bgImage from "assets/img/sidebar-1.png";
@@ -70,8 +70,7 @@ export default function App( { ...rest } ) {
         <div className={classes.mainPanel}>
         <Sidebar
           routes={privateroutes}
-          logoText={"Acesso Privado da RVG/SC"}
-          logo={logo}
+          logoText={"Acesso Privado da Rede de Vigilância Genômica de Santa Catarina"}
           image={image}
           handleDrawerToggle={handleDrawerToggle}
           open={mobileOpen}

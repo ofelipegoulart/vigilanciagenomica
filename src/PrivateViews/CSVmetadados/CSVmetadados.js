@@ -24,7 +24,7 @@ export default function Icons() {
             <h1>CSV Metadados</h1>
           </CardHeader>
           <CardBody>
-            <p>No formulário abaixo, insira o arquivo .csv contendo as amostras. Caso você esteja com o Microsoft Excel ou software similar e não saiba como salvar o arquivo em .csv, siga os tutoriais abaixo:</p>
+            <p>No formulário abaixo, insira o arquivo .csv contendo as amostras. Caso você utilize o Microsoft Excel ou o Google Sheets e não saiba como exportar uma planilha do tipo .CSV, siga o tutorial abaixo:</p>
             <p><b>Tutorial para Microsoft Excel e Google Sheets: </b><a href="https://rockcontent.com/br/blog/csv/" target="_blank">Link aqui</a></p>
           </CardBody>
         </Card>
