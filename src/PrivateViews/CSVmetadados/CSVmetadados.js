@@ -11,20 +11,26 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-dashboard-react/views/iconsStyle.js";
+import typographyStyles from "assets/jss/material-dashboard-react/components/typographyStyle.js";
 
 const useStyles = makeStyles(styles);
+const useTypographyStyles = makeStyles(typographyStyles);
 
 export default function Icons() {
   const classes = useStyles();
+  const typographyClasses = useTypographyStyles();
+
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
           <CardHeader plain color="success">
-            <h1>CSV Metadados</h1>
+            <h1>Envio de Metadados</h1>
           </CardHeader>
           <CardBody>
-            <p>No formulário abaixo, insira o arquivo .csv contendo as amostras. Caso você utilize o Microsoft Excel ou o Google Sheets e não saiba como exportar uma planilha do tipo .CSV, siga o tutorial abaixo:</p>
+            <p>No formulário abaixo, insira o o arquivo .csv contendo as amostras.</p>
+            <p className={typographyClasses.dangerText}><b>Importante: é necessário que o arquivo esteja em formato CSV.</b></p>
+            <p>Caso você utilize o Microsoft Excel ou o Google Sheets e não saiba como exportar uma planilha do tipo .CSV, siga o tutorial abaixo:</p>
             <p><b>Tutorial para Microsoft Excel e Google Sheets: </b><a href="https://rockcontent.com/br/blog/csv/" target="_blank">Link aqui</a></p>
           </CardBody>
         </Card>

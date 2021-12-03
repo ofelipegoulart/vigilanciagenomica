@@ -17,7 +17,7 @@ const dashboardRoutes = [
   },
   {
     path: "/submeter-CSV",
-    name: "CSV Metadados",
+    name: "Envio de Metadados",
     icon: "upload_file",
     component: CSVMetadados,
     layout: "/privado",
