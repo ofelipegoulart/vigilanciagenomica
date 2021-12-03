@@ -37,7 +37,7 @@ const dashboardRoutes = [
   {
     path: "/mapa",
     name: "Mapa",
-    icon: LocationOn,
+    icon: "public",
     component: Maps,
     layout: "/dashboard",
   },
