@@ -24,14 +24,14 @@ const dashboardRoutes = [
     path: "/painelSC",
     name: "Painel SC",
     icon: "bar_chart",
-    component: UserProfile,
+    component: TableList,
     layout: "/dashboard",
   },
   {
     path: "/perfil-variantes",
     name: "Perfil das Variantes",
     icon: "coronavirus",
-    component: TableList,
+    component: UserProfile,
     layout: "/dashboard",
   },
   {
