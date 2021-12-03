@@ -9,7 +9,6 @@ import {
   dangerColor,
   whiteColor,
   grayColor,
-  dashboardColor,
 } from "assets/jss/material-dashboard-react.js";
 
 const headerStyle = () => ({
@@ -39,7 +38,6 @@ const headerStyle = () => ({
   },
   title: {
     ...defaultFont,
-    letterSpacing: "unset",
     lineHeight: "30px",
     fontSize: "18px",
     borderRadius: "3px",
@@ -76,11 +74,6 @@ const headerStyle = () => ({
   danger: {
     backgroundColor: dangerColor[0],
     color: whiteColor,
-    ...defaultBoxShadow,
-  },
-  dashboard: {
-    backgroundColor: dashboardColor[0],
-    color: dashboardColor,
     ...defaultBoxShadow,
   },
 });

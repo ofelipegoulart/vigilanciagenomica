@@ -5,7 +5,6 @@ import {
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
-  dashboardCardHeader,
   whiteColor,
   dashboardColor,
 } from "assets/jss/material-dashboard-react.js";
@@ -119,12 +118,6 @@ const cardHeaderStyle = {
     color: whiteColor,
     "&:not($cardHeaderIcon)": {
       ...roseCardHeader,
-    },
-  },
-  dashboardCardHeader: {
-    color: whiteColor,
-    "&:not($cardHeaderIcon)": {
-      ...dashboardCardHeader,
     },
   },
 };

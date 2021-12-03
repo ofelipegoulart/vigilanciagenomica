@@ -42,6 +42,7 @@ const dashboardStyle = {
     paddingTop: "10px",
     marginBottom: "0",
     fontWeight: "300",
+    letterSpacing: "0.55px",
   },
   cardCategoryWhite: {
     color: "rgba(" + hexToRgb(whiteColor) + ",.62)",
@@ -68,7 +69,7 @@ const dashboardStyle = {
     color: whiteColor,
     marginTop: "5px",
     minHeight: "auto",
-    fontWeight: "300",
+    fontWeight: "400",
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "5px",
     textDecoration: "none",

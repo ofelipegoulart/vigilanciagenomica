@@ -53,7 +53,6 @@ const dangerColor = ["#f44336", "#ef5350", "#e53935", "#f55a4e"];
 const successColor = ["#4caf50", "#66bb6a", "#43a047", "#5cb860"];
 const infoColor = ["#0D47A1","#0F56BF","#136DF2","#5D99F4"];
 const roseColor = ["#e91e63", "#ec407a", "#d81b60", "#eb3573"];
-const dashboardColor = ["#1565c0","#003c8f","#1565c0","#5e92f3"];
 const grayColor = [
   "#999",
   "#777",
@@ -131,15 +130,6 @@ const roseBoxShadow = {
     ",.4)",
 };
 
-const dashboardBoxShadow = {
-  boxShadow:
-    "0 4px 20px 0 rgba(" +
-    hexToRgb(blackColor) +
-    ",.14), 0 7px 10px -5px rgba(" +
-    hexToRgb(dashboardColor[0]) +
-    ",.4)",
-};
-
 const warningCardHeader = {
   background:
     "linear-gradient(60deg, " + warningColor[1] + ", " + warningColor[2] + ")",
@@ -169,11 +159,6 @@ const roseCardHeader = {
   background:
     "linear-gradient(60deg, " + roseColor[1] + ", " + roseColor[2] + ")",
   ...roseBoxShadow,
-};
-const dashboardCardHeader = {
-  background:
-    "linear-gradient(60deg, " + dashboardColor[1] + ", " + dashboardColor[2] + ")",
-  ...dashboardBoxShadow,
 };
 
 const cardActions = {
@@ -272,7 +257,6 @@ export {
   grayColor,
   blackColor,
   whiteColor,
-  dashboardColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
@@ -285,7 +269,6 @@ export {
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
-  dashboardCardHeader,
   cardActions,
   cardHeader,
   defaultBoxShadow,

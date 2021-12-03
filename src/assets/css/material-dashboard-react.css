@@ -64,11 +64,13 @@ small {
   font-size: 60%;
   color:#3C4858!important;
   font-weight: 100!important;
+  letter-spacing: 0.5px;
 }
 
 h1 {
   font-size: 3em;
   line-height: 1.15em;
+  font-weight: 400;
 }
 
 h2 {
@@ -108,7 +110,6 @@ blockquote p {
 }
 
 body,
-h1,
 h2,
 h3,
 h4,
@@ -491,9 +492,6 @@ footer ul li a:hover {
 .fixed-plugin.rtl-fixed-plugin .dropdown-menu {
   right: auto;
   left: 80px;
-}
-* {
-  letter-spacing: normal !important;
 }
 
 /*!

@@ -41,6 +41,7 @@ const rtlStyle = {
     marginTop: "0",
     paddingTop: "10px",
     marginBottom: "0",
+    letterSpacing: 2px",
   },
   cardCategoryWhite: {
     color: "rgba(" + hexToRgb(whiteColor) + ",.62)",
