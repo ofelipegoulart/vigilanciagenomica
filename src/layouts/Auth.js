@@ -1,63 +1,57 @@
 import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+
 import { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import jwt_decode from 'jwt-decode';
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
-import sidebarStyles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+
+import jwt_decode from 'jwt-decode';
 import api from "../api.js";
 
+import Sidebar from "components/Sidebar/Sidebar.js";
 import privateroutes from "privateRoutes.js";
 
 import bgImage from "assets/img/sidebar-1.png";
 import logo from "assets/img/reactlogo.png";
 
-let ps;
-
 import List from "@material-ui/core/List";
 
-import { Switch, Route, Redirect } from "react-router-dom";
+const switchRoutes = (
+  <Switch>
+    {privateroutes.map((prop, key) => {
+      if (prop.layout === "/user") {
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
+          />
+        );
+      }
+      return null;
+    })}
+    <Redirect from="/user/tutorial" to="/" />
+  </Switch>
+);
 
 export default function App( { ...rest } ) {
-  const useStyles = makeStyles(styles);
-  const useSidebarStyles = makeStyles(sidebarStyles);
-  const classes = useStyles();
-  const sidebarClasses = useSidebarStyles();
+  // Login
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const mainPanel = React.createRef();
-  // states and functions
+
+  // Estilização
+  const useStyles = makeStyles(styles);
+  const classes = useStyles();
   const [image, setImage] = React.useState(bgImage);
-  const [color, setColor] = React.useState("blue");
+  const [color, setColor] = React.useState("green");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleImageClick = (image) => {
-    setImage(image);
-  };
-  const handleColorClick = (color) => {
-    setColor(color);
-  };
-
-  const handleFixedClick = () => {
-    if (fixedClasses === "dropdown") {
-      setFixedClasses("dropdown show");
-    } else {
-      setFixedClasses("dropdown");
-    }
-  };
-
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
-  };
-
-  const resizeFunction = () => {
-    if (window.innerWidth >= 960) {
-      setMobileOpen(false);
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -69,24 +63,6 @@ export default function App( { ...rest } ) {
       console.log(err);
     }
   };
-
-  const switchRoutes = (
-    <Switch>
-      {privateroutes.map((prop, key) => {
-        if (prop.layout === "/user") {
-          return (
-            <Route
-              path={prop.layout + prop.path}
-              component={prop.component}
-              key={key}
-            />
-          );
-        }
-        return null;
-      })}
-      <Redirect from="/user" to="/user/tutorial/" />
-    </Switch>
-  );
 
   return (
     <div>
@@ -131,5 +107,3 @@ export default function App( { ...rest } ) {
     </div>
   );
 }
-
-/* uppercase */
