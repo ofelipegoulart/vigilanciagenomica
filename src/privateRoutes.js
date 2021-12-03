@@ -4,6 +4,7 @@ import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
 import Dashboard from "PrivateViews/Dashboard/Dashboard.js";
+import CSVMetadados from "PrivateViews/CSVmetadados/CSVmetadados.js";
 import UserProfile from "PrivateViews/UserProfile/UserProfile.js";
 import TableList from "PrivateViews/TableList/TableList.js";
 import Typography from "PrivateViews/Typography/Typography.js";
@@ -23,7 +24,7 @@ const dashboardRoutes = [
     path: "/submeter-CSV",
     name: "CSV Metadados",
     icon: "upload_file",
-    component: Dashboard,
+    component: CSVMetadados,
     layout: "/user",
   },
   {
