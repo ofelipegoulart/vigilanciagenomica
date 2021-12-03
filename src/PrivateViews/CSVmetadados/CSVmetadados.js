@@ -25,8 +25,7 @@ export default function Icons() {
           </CardHeader>
           <CardBody>
             <p>No formulário abaixo, insira o arquivo .csv contendo as amostras. Caso você esteja com o Microsoft Excel ou software similar e não saiba como salvar o arquivo em .csv, siga os tutoriais abaixo:</p>
-            <p><b>Tutorial no Microsoft Excel: </b><a href="#">Link aqui</a></p>
-            <p><b>Tutorial no Google Sheets: </b><a href="#">Link aqui</a></p>
+            <p><b>Tutorial para Microsoft Excel e Google Sheets: </b><a href="https://rockcontent.com/br/blog/csv/" target="_blank">Link aqui</a></p>
           </CardBody>
         </Card>
       </GridItem>
