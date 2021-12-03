@@ -19,7 +19,7 @@ import List from "@material-ui/core/List";
 const switchRoutes = (
   <Switch>
     {privateroutes.map((prop, key) => {
-      if (prop.layout === "/user") {
+      if (prop.layout === "/privado") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -30,7 +30,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/user/tutorial" to="/" />
+    <Redirect from="/privado/tutorial" to="/" />
   </Switch>
 );
 

@@ -12,7 +12,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/dashboard" component={Admin} />
-      <Route path="/user" component={Auth} />
+      <Route path="/privado" component={Auth} />
       <Redirect from="/" to="/dashboard/inicio" />
     </Switch>
   </BrowserRouter>,

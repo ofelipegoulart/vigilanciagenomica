@@ -21,7 +21,7 @@ export default function Icons() {
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
           <CardHeader plain color="success">
-            <h1>Sequenciamento</h1>
+            <h1>Registro de Sequenciamento</h1>
           </CardHeader>
           <CardBody>
             <p>No formulário abaixo, insira o arquivo .csv contendo as amostras. Caso você utilize o Microsoft Excel ou o Google Sheets e não saiba como exportar uma planilha do tipo .CSV, siga o tutorial abaixo:</p>
