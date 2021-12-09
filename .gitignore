@@ -1,2 +1,9 @@
 node_modules
 .env
+.firebaserc
+firebase.json
+.firebase
+build
+.babelrc
+amplify.yml
+rvg-sc

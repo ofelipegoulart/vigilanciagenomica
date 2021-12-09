@@ -114,6 +114,9 @@ export default function Sidebar(props) {
           <div className={classes.sidebarWrapper}>
             {props.rtlActive ? <RTLNavbarLinks /> : <AdminNavbarLinks />}
             {links}
+            <ListItem button className={classes.itemLink} onClick={() => console.log('clicou')}>
+              <ListItemText primary="Logoff"  className={classes.itemText}/>
+              </ListItem>
           </div>
           {image !== undefined ? (
             <div

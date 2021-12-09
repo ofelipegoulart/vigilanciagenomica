@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import { useState } from 'react';
@@ -9,6 +9,7 @@ import jwt_decode from 'jwt-decode';
 import api from "../api.js";
 
 import Sidebar from "components/PrivateSidebar/Sidebar.js";
+import Navbar from "components/Navbars/PrivateNavbarLinks.js";
 import privateroutes from "privateRoutes.js";
 
 import bgImage from "assets/img/sidebar-1.png";
@@ -36,6 +37,9 @@ const switchRoutes = (
 
 export default function App( { ...rest } ) {
   // Login
+
+  const [userToken, setUserToken] = useState(localStorage.getItem('@rvg:token'))
+
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -59,6 +63,7 @@ export default function App( { ...rest } ) {
     try {
       const res = await api.post("/login", { username, password });
       localStorage.setItem('@rvg:token', res.data.accessToken)
+      setUserToken(res.data.accessToken)
     } catch (err) {
       console.log(err);
     }
@@ -66,7 +71,7 @@ export default function App( { ...rest } ) {
 
   return (
     <div>
-      {localStorage.getItem('@rvg:token') ? (
+      {userToken ? (
         <div className={classes.mainPanel}>
         <Sidebar
           routes={privateroutes}
@@ -75,6 +80,11 @@ export default function App( { ...rest } ) {
           handleDrawerToggle={handleDrawerToggle}
           open={mobileOpen}
           color={color}
+          {...rest}
+        />
+        <Navbar
+          routes={privateroutes}
+          handleDrawerToggle={handleDrawerToggle}
           {...rest}
         />
           <div className={classes.content}>
