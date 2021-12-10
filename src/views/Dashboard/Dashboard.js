@@ -54,28 +54,28 @@ export default function Dashboard() {
     },
     {
       name: "Page C",
-      uv: 1397,
+      uv: 991,
       pv: 1098,
       amt: 989,
       cnt: 350
     },
     {
       name: "Page D",
-      uv: 1480,
+      uv: 907,
       pv: 1200,
       amt: 1228,
       cnt: 480
     },
     {
       name: "Page E",
-      uv: 1520,
+      uv: 881,
       pv: 1108,
       amt: 1100,
       cnt: 460
     },
     {
       name: "Page F",
-      uv: 1400,
+      uv: 580,
       pv: 680,
       amt: 1700,
       cnt: 380
@@ -96,98 +96,126 @@ export default function Dashboard() {
     },
     {
       name: "Page I",
-      uv: 1397,
+      uv: 991,
       pv: 1098,
       amt: 989,
       cnt: 350
     },
     {
       name: "Page J",
-      uv: 1480,
+      uv: 907,
       pv: 1200,
       amt: 1228,
       cnt: 480
     },
     {
       name: "Page K",
-      uv: 1520,
+      uv: 881,
       pv: 1108,
       amt: 1100,
       cnt: 460
     },
     {
       name: "Page L",
-      uv: 590,
-      pv: 800,
-      amt: 1400,
-      cnt: 490
-    },
-    {
-      name: "Page M",
-      uv: 868,
-      pv: 967,
-      amt: 1506,
-      cnt: 590
-    },
-    {
-      name: "Page N",
-      uv: 1397,
-      pv: 1098,
-      amt: 989,
-      cnt: 350
-    },
-    {
-      name: "Page O",
-      uv: 1480,
-      pv: 1200,
-      amt: 1228,
-      cnt: 480
-    },
-    {
-      name: "Page P",
-      uv: 1520,
-      pv: 1108,
-      amt: 1100,
-      cnt: 460
-    },
-    {
-      name: "Page Q",
-      uv: 1400,
+      uv: 580,
       pv: 680,
       amt: 1700,
       cnt: 380
     },
     {
-      name: "Page R",
+      name: "Page M",
       uv: 590,
       pv: 800,
       amt: 1400,
       cnt: 490
     },
     {
-      name: "Page S",
+      name: "Page N",
       uv: 868,
       pv: 967,
       amt: 1506,
       cnt: 590
     },
     {
-      name: "Page T",
-      uv: 1397,
+      name: "Page O",
+      uv: 991,
       pv: 1098,
       amt: 989,
       cnt: 350
     },
     {
-      name: "Page U",
-      uv: 1480,
+      name: "Page P",
+      uv: 907,
       pv: 1200,
       amt: 1228,
       cnt: 480
     },
     {
+      name: "Page Q",
+      uv: 881,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
+    {
+      name: "Page R",
+      uv: 580,
+      pv: 680,
+      amt: 1700,
+      cnt: 380
+    },
+    {
+      name: "Page S",
+      uv: 590,
+      pv: 800,
+      amt: 1400,
+      cnt: 490
+    },
+    {
+      name: "Page T",
+      uv: 868,
+      pv: 967,
+      amt: 1506,
+      cnt: 590
+    },
+    {
+      name: "Page U",
+      uv: 991,
+      pv: 1098,
+      amt: 989,
+      cnt: 350
+    },
+    {
       name: "Page V",
-      uv: 1520,
+      uv: 907,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page W",
+      uv: 881,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
+    {
+      name: "Page X",
+      uv: 580,
+      pv: 680,
+      amt: 1700,
+      cnt: 380
+    },
+    {
+      name: "Page Y",
+      uv: 907,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page Z",
+      uv: 881,
       pv: 1108,
       amt: 1100,
       cnt: 460
@@ -264,20 +292,20 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
-          <ResponsiveContainer width={'90%'} aspect={2}>
+          <ResponsiveContainer width={'95%'} aspect={2.3}>
           <ComposedChart
           width={1200}
           height={600}
           data={data}
-          margin={{ top: 0, right: 5, bottom: 5, left: 5 }}
+          margin={{ top: 0, right: 10, bottom: 5, left: -5 }}
           >
           <CartesianGrid stroke="#f5f5f5" />
           <XAxis dataKey="name" allowDataOverflow="true" />
           <YAxis allowDataOverflow="true" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" barSize={30} fill="#0D47A1" />
-          <Line type="monotone" dataKey="uv" stroke="#F2961F" />
+          <Bar dataKey="pv" barSize={30} fill="#a8a8a8" />
+          <Line type="monotone" dot={false} strokeWidth={1.4} dataKey="uv" stroke="#0D47A1" />
           </ComposedChart>
           </ResponsiveContainer>
           </div>
