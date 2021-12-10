@@ -77,7 +77,119 @@ export default function Dashboard() {
       pv: 680,
       amt: 1700,
       cnt: 380
-    }
+    },
+    {
+      name: "Page G",
+      uv: 590,
+      pv: 800,
+      amt: 1400,
+      cnt: 490
+    },
+    {
+      name: "Page H",
+      uv: 868,
+      pv: 967,
+      amt: 1506,
+      cnt: 590
+    },
+    {
+      name: "Page I",
+      uv: 1397,
+      pv: 1098,
+      amt: 989,
+      cnt: 350
+    },
+    {
+      name: "Page J",
+      uv: 1480,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page K",
+      uv: 1520,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
+    {
+      name: "Page L",
+      uv: 590,
+      pv: 800,
+      amt: 1400,
+      cnt: 490
+    },
+    {
+      name: "Page M",
+      uv: 868,
+      pv: 967,
+      amt: 1506,
+      cnt: 590
+    },
+    {
+      name: "Page N",
+      uv: 1397,
+      pv: 1098,
+      amt: 989,
+      cnt: 350
+    },
+    {
+      name: "Page O",
+      uv: 1480,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page P",
+      uv: 1520,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
+    {
+      name: "Page Q",
+      uv: 1400,
+      pv: 680,
+      amt: 1700,
+      cnt: 380
+    },
+    {
+      name: "Page R",
+      uv: 590,
+      pv: 800,
+      amt: 1400,
+      cnt: 490
+    },
+    {
+      name: "Page S",
+      uv: 868,
+      pv: 967,
+      amt: 1506,
+      cnt: 590
+    },
+    {
+      name: "Page T",
+      uv: 1397,
+      pv: 1098,
+      amt: 989,
+      cnt: 350
+    },
+    {
+      name: "Page U",
+      uv: 1480,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page V",
+      uv: 1520,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
   ];
   return (
     <div>
@@ -151,14 +263,14 @@ export default function Dashboard() {
           <Card chart>
           <div className={classes.chartVariant}>
           <ComposedChart
-          width={500}
+          width={1200}
           height={400}
           data={data}
           margin={{
             top: 20,
-            right: 80,
+            right: 200,
             bottom: 20,
-            left: 80
+            left: 200
           }}
           >
           <CartesianGrid stroke="#f5f5f5" />
