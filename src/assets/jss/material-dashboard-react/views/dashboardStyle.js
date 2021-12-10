@@ -79,18 +79,24 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
+
   spacing: {
     paddingBottom: "10px",
   },
+
   chartVariant: {
-    marginTop: "100px",
-    marginLeft:"auto",
-    marginRight:"auto",
+    marginTop: "80px",
+    position: "relative",
+    left: "0",
+    right: "0",
+    overflowX: "hidden",
+    overflowY: "hidden",
   },
+
   cardVariant : {
     marginTop: "-80px",
-    marginLeft:"auto",
-    marginRight:"auto",
+    marginLeft: "0px",
+    marginRight: "0px",
   }
 
 };

@@ -10,7 +10,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  Scatter
+  Scatter,
+  Brush,
+  ResponsiveContainer
 } from "recharts";
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
@@ -262,25 +264,22 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
+          <ResponsiveContainer width={'90%'} aspect={2}>
           <ComposedChart
           width={1200}
-          height={400}
+          height={600}
           data={data}
-          margin={{
-            top: 20,
-            right: 200,
-            bottom: 20,
-            left: 200
-          }}
+          margin={{ top: 0, right: 5, bottom: 5, left: 5 }}
           >
           <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis dataKey="name" allowDataOverflow="true" />
+          <YAxis allowDataOverflow="true" />
           <Tooltip />
           <Legend />
           <Bar dataKey="pv" barSize={30} fill="#0D47A1" />
           <Line type="monotone" dataKey="uv" stroke="#F2961F" />
           </ComposedChart>
+          </ResponsiveContainer>
           </div>
             <CardBody>
               <h4 className={classes.cardTitle}></h4>
