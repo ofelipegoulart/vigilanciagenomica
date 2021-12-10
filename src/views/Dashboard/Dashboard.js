@@ -300,11 +300,11 @@ export default function Dashboard() {
           margin={{ top: 0, right: 10, bottom: 5, left: -5 }}
           >
           <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="name" allowDataOverflow="true" />
-          <YAxis allowDataOverflow="true" />
+          <XAxis dataKey="name" allowDataOverflow="true" interval="preserveStart" />
+          <YAxis domain={[0, 'dataMax + 1000']} allowDataOverflow="true" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" barSize={30} fill="#a8a8a8" />
+          <Bar dataKey="pv" barSize={60} fill="#a8a8a8" />
           <Line type="monotone" dot={false} strokeWidth={1.4} dataKey="uv" stroke="#0D47A1" />
           </ComposedChart>
           </ResponsiveContainer>
