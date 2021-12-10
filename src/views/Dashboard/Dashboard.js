@@ -278,7 +278,7 @@ export default function Dashboard() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" barSize={10} fill="#0D47A1" />
+          <Bar dataKey="pv" barSize={30} fill="#0D47A1" />
           <Line type="monotone" dataKey="uv" stroke="#F2961F" />
           </ComposedChart>
           </div>
