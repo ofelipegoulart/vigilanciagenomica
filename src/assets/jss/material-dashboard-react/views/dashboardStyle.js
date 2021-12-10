@@ -82,6 +82,17 @@ const dashboardStyle = {
   spacing: {
     paddingBottom: "10px",
   },
+  chartVariant: {
+    marginTop: "100px",
+    marginLeft:"auto",
+    marginRight:"auto",
+  },
+  cardVariant : {
+    marginTop: "-80px",
+    marginLeft:"auto",
+    marginRight:"auto",
+  }
+
 };
 
 export default dashboardStyle;

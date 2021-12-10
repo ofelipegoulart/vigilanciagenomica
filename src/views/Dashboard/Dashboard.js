@@ -1,21 +1,22 @@
 import React from "react";
 // react plugin for creating charts
-import ChartistGraph from "react-chartist";
+import {
+  ComposedChart,
+  Line,
+  Area,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Scatter
+} from "recharts";
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import Store from "@material-ui/icons/Store";
-import Warning from "@material-ui/icons/Warning";
-import DateRange from "@material-ui/icons/DateRange";
-import LocalOffer from "@material-ui/icons/LocalOffer";
-import Update from "@material-ui/icons/Update";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
-import AccessTime from "@material-ui/icons/AccessTime";
-import Accessibility from "@material-ui/icons/Accessibility";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -29,20 +30,56 @@ import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
-import { bugs, website, server } from "variables/general.js";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart,
-} from "variables/charts.js";
-
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
   const classes = useStyles();
+  const data = [
+    {
+      name: "Page A",
+      uv: 590,
+      pv: 800,
+      amt: 1400,
+      cnt: 490
+    },
+    {
+      name: "Page B",
+      uv: 868,
+      pv: 967,
+      amt: 1506,
+      cnt: 590
+    },
+    {
+      name: "Page C",
+      uv: 1397,
+      pv: 1098,
+      amt: 989,
+      cnt: 350
+    },
+    {
+      name: "Page D",
+      uv: 1480,
+      pv: 1200,
+      amt: 1228,
+      cnt: 480
+    },
+    {
+      name: "Page E",
+      uv: 1520,
+      pv: 1108,
+      amt: 1100,
+      cnt: 460
+    },
+    {
+      name: "Page F",
+      uv: 1400,
+      pv: 680,
+      amt: 1700,
+      cnt: 380
+    }
+  ];
   return (
     <div>
       <GridContainer>
@@ -109,18 +146,31 @@ export default function Dashboard() {
             </CardBody>
         </GridItem>
       </GridContainer>
+      <div className={classes.cardVariant}>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
-            <CardHeader color="success">
-              <ChartistGraph
-                className="ct-chart"
-                data={dailySalesChart.data}
-                type="Line"
-                options={dailySalesChart.options}
-                listener={dailySalesChart.animation}
-              />
-            </CardHeader>
+          <div className={classes.chartVariant}>
+          <ComposedChart
+          width={500}
+          height={400}
+          data={data}
+          margin={{
+            top: 20,
+            right: 80,
+            bottom: 20,
+            left: 80
+          }}
+          >
+          <CartesianGrid stroke="#f5f5f5" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="pv" barSize={10} fill="#0D47A1" />
+          <Line type="monotone" dataKey="uv" stroke="#F2961F" />
+          </ComposedChart>
+          </div>
             <CardBody>
               <h4 className={classes.cardTitle}>Daily Sales</h4>
               <p className={classes.cardCategory}>
@@ -130,14 +180,10 @@ export default function Dashboard() {
                 increase in today sales.
               </p>
             </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
-              </div>
-            </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
+      </div>
     </div>
   );
 }
