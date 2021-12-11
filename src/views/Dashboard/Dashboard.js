@@ -303,7 +303,7 @@ export default function Dashboard() {
           <XAxis dataKey="name" allowDataOverflow="true" interval="preserveStart" />
           <YAxis domain={[0, 'dataMax + 1000']} allowDataOverflow="true" />
           <Tooltip />
-          <Legend />
+          <Legend wrapperStyle={{ bottom: -5}} />
           <Bar dataKey="pv" barSize={60} fill="#a8a8a8" />
           <Line type="monotone" dot={false} strokeWidth={1.4} dataKey="uv" stroke="#0D47A1" />
           </ComposedChart>
