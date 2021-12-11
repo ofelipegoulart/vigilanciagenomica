@@ -31,7 +31,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/privado/tutorial" to="/" />
+    <Redirect from="/privado" to="/privado/tutorial" />
   </Switch>
 );
 
