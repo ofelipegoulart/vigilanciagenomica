@@ -72,12 +72,17 @@ const appStyle = (theme) => ({
     marginTop: "20px",
     border: "none",
     color: "white",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: "400",
+
+    lineHeight: "1.5em",
     padding: "12px 30px",
     transition:
       "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
     textTransform: "uppercase",
     touchAction: "manipulation",
     willChange: "box-shadow, transform",
+    borderRadius: "3px",
     backgroundColor: infoColor[0],
     boxShadow:
       "0 2px 2px 0 rgba(" +

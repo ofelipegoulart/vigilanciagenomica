@@ -118,6 +118,10 @@ const headerLinksStyle = (theme) => ({
     },
     display: "inline-block",
   },
+  privateNavbarLinksContainer: {
+    marginTop: "15px",
+    width: "98%",
+  },
   "@media (min-width: 320px) and (max-width:1024px)": {
     navbarLinksContainer: {
       marginTop: "4px",

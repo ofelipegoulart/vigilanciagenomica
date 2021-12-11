@@ -12,11 +12,11 @@ export default function PrivateNavbarLinks() {
   const classes = useStyles();
 
   return (
-    <div className={classes.navbarLinksContainer}>
+    <div className={classes.privateNavbarLinksContainer}>
     <a onClick={()=> {
         console.log('teste')
         localStorage.removeItem('@rvg:token')
-      }} href="/privado" className={classes.linkText}>Logout</a><br></br>
+      }} href="/privado" className={classes.linkText}>Sair</a><br></br>
       </div>
   );
 }
