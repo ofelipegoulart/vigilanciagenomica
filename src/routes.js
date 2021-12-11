@@ -4,7 +4,7 @@ import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
 import Dashboard from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
+import PerfilVariantes from "views/PerfilVariantes/PerfilVariantes.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Relatorios from "views/Relatorios/Icons.js";
@@ -31,7 +31,7 @@ const dashboardRoutes = [
     path: "/perfil-variantes",
     name: "Perfil das Variantes",
     icon: "coronavirus",
-    component: UserProfile,
+    component: PerfilVariantes,
     layout: "/dashboard",
   },
   {

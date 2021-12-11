@@ -33,6 +33,8 @@ const headerLinksStyle = (theme) => ({
     fontSize: "14.5px",
     lineHeight:"1.2px",
     float: "right",
+    color: "#333",
+    textDecoration: "none",
   },
   update: {
     zIndex: "4",
@@ -123,11 +125,15 @@ const headerLinksStyle = (theme) => ({
     width: "98%",
   },
   "@media (min-width: 320px) and (max-width:1024px)": {
-    navbarLinksContainer: {
-      marginTop: "4px",
-      width: "95%",
+    linkText: {
+      marginRight: "15px",
       textAlign: "right",
       color:"white ! important",
+      textDecoration: "none",
+    },
+    update: {
+      color: "white",
+      marginLeft:"15px",
     }
   },
 });
