@@ -10,17 +10,11 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import { data } from "variables/PieData.js";
 
 import styles from "assets/jss/material-dashboard-react/views/variantStyle.js";
 
 const useStyles = makeStyles(styles);
-
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
-];
 
 export default function PerfilVariantes() {
   const classes = useStyles();
