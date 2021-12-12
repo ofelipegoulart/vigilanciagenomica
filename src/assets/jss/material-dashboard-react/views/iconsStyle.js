@@ -12,8 +12,8 @@ const iconsStyle = {
     border: "0",
     ...boxShadow,
   },
-  iframeContainer: {
-    margin: "0 -20px 0",
+  cardLogos: {
+    marginTop: "-45px",
   },
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -40,6 +40,72 @@ const iconsStyle = {
       fontWeight: "400",
       lineHeight: "1",
     },
+  },
+  row1: {
+    display: "flex",
+    justifyContent: "space-between",
+    width:"1000px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "90px",
+  },
+  bioinfoLogo: {
+    width:"25%",
+    padding: "5px",
+    height:"300px",
+  },
+  lacenLogo: {
+    width:"35%",
+    height:"300px",
+  },
+  diveLogo: {
+    width:"55%",
+  },
+  row2: {
+    display: "flex",
+    justifyContent: "space-between",
+    width:"1000px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "50px",
+    marginBottom: "50px",
+  },
+  ifscLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  fapescLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  biomehubLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  lvaLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  row3: {
+    display: "flex",
+    justifyContent: "space-between",
+    width:"1000px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "50px",
+    marginBottom: "90px",
+  },
+  lbmmsLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  nubioinfoLogo: {
+    width:"21%",
+    height:"210px",
+  },
+  capesLogo: {
+    width:"21%",
+    height:"210px",
   },
 };
 
