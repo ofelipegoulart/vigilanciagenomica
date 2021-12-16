@@ -31,7 +31,7 @@ const iconsStyle = {
     color: whiteColor,
     marginTop: "0px",
     minHeight: "auto",
-    fontWeight: "300",
+    fontWeight: "400",
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
     textDecoration: "none",
@@ -44,47 +44,66 @@ const iconsStyle = {
   row1: {
     display: "flex",
     justifyContent: "space-between",
-    width:"1000px",
+    alignContent: "center",
+    width:"910px",
+    height:"340px",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "90px",
   },
-  bioinfoLogo: {
-    width:"25%",
-    padding: "5px",
-    height:"300px",
+  fapescLogo: {
+    width:"46%",
+    paddingTop:"60px",
+    paddingBottom:"60px",
+    paddingLeft:"60px",
+    paddingRight:"60px",
   },
-  lacenLogo: {
-    width:"35%",
-    height:"300px",
-  },
-  diveLogo: {
+  sesLogo: {
     width:"55%",
+    paddingTop:"80px",
+    paddingBottom:"80px",
+    paddingLeft:"40px",
+    paddingRight:"40px",
+  },
+  ufscLogo: {
+    width:"30%",
+    paddingTop:"80px",
+    paddingBottom:"80px",
+    paddingLeft:"40px",
+    paddingRight:"40px",
   },
   row2: {
     display: "flex",
     justifyContent: "space-between",
-    width:"1000px",
+    alignContent: "center",
+    width:"910px",
+    height:"300px",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "50px",
-    marginBottom: "50px",
+    marginTop: "90px",
+  },
+  nubioinfoLogo: {
+    width:"27%",
+    paddingTop:"60px",
+    paddingBottom:"60px",
+    paddingLeft:"60px",
+    paddingRight:"60px",
+  },
+  bioinfoLogo: {
+    width:"25%",
+    padding: "5px",
+  },
+  lacenLogo: {
+    width:"35%",
   },
   ifscLogo: {
     width:"21%",
-    height:"210px",
-  },
-  fapescLogo: {
-    width:"21%",
-    height:"210px",
   },
   biomehubLogo: {
     width:"21%",
-    height:"210px",
   },
   lvaLogo: {
-    width:"21%",
-    height:"210px",
+    width:"41%",
   },
   row3: {
     display: "flex",
@@ -96,10 +115,6 @@ const iconsStyle = {
     marginBottom: "90px",
   },
   lbmmsLogo: {
-    width:"21%",
-    height:"210px",
-  },
-  nubioinfoLogo: {
     width:"21%",
     height:"210px",
   },

@@ -15,8 +15,10 @@ import Table from "components/Table/Table.js";
 import { pesquisadores } from "variables/Tables/SobreProjeto.js";
 
 import bioinfo from "assets/img/logos/bioinfo.png";
+import ufsc from "assets/img/logos/UFSClogo.png";
+import ses from "assets/img/logos/seslogo.png";
+import dive from "assets/img/logos/divelogo.png";
 import lacen from "assets/img/logos/lacen.png";
-import dive from "assets/img/logos/divelogo.svg";
 import ifsc from "assets/img/logos/ifsclogo.png";
 import fapesc from "assets/img/logos/fapesclogo.png";
 import lva from "assets/img/logos/lvalogo.png";
@@ -64,29 +66,31 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
           <GridItem xs={12} sm={12} md={12}>
             <Card>
             <div className={classes.row1}>
-            <img src={bioinfo} className={classes.bioinfoLogo}/>
-            <img src={lacen} className={classes.lacenLogo}/>
-            <img src={dive} className={classes.diveLogo}/>
+            <img src={ses} className={classes.sesLogo}/>
+            <img src={fapesc} className={classes.fapescLogo}/>
+            <img src={ufsc} className={classes.ufscLogo}/>
             </div>
             <div className={classes.row2}>
-            <img src={ifsc} className={classes.ifscLogo}/>
-            <img src={fapesc} className={classes.fapescLogo}/>
-            <img src={biomehub} className={classes.biomehubLogo}/>
+            <img src={nubioinfo} className={classes.nubioinfoLogo}/>
+            <img src={bioinfo} className={classes.bioinfoLogo}/>
+            <img src={lbmms} className={classes.lbmmsLogo}/>
             <img src={lva} className={classes.lvaLogo}/>
             </div>
             <div className={classes.row3}>
-            <img src={lbmms} className={classes.lbmmsLogo}/>
-            <img src={nubioinfo} className={classes.nubioinfoLogo}/>
+            <img src={dive} className={classes.diveLogo}/>
+            <img src={lacen} className={classes.lacenLogo}/>
+            <img src={biomehub} className={classes.biomehubLogo}/>
+            <img src={ifsc} className={classes.ifscLogo}/>
             <img src={capes} className={classes.capesLogo}/>
             </div>
             </Card>
             </GridItem>
             </GridContainer>
             <Card>
-            <CardHeader plain color="info">
-              <h2 className={classes.cardTitleWhite}>
+            <CardHeader color="info">
+              <h3 className={classes.cardTitleWhite}>
                 Equipe do Projeto
-              </h2>
+              </h3>
             </CardHeader>
             <CardBody>
               <Table
