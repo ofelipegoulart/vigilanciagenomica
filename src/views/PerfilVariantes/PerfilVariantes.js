@@ -41,7 +41,7 @@ export default function PerfilVariantes() {
         <div className={classes.spacing}>&nbsp;
         </div>
         <CardHeader color="info">
-          <h3 className={classes.cardTitleWhite}>Variantes Identificadas</h3>
+          <h3 className={classes.cardTitleWhite}>Frequencia das Variantes (total)</h3>
         </CardHeader>
           <CardBody>
           </CardBody>
