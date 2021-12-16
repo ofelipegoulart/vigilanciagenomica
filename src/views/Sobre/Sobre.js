@@ -12,6 +12,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import Table from "components/Table/Table.js";
 
+import { pesquisadores } from "variables/Tables/SobreProjeto.js";
+
 import bioinfo from "assets/img/logos/bioinfo.png";
 import lacen from "assets/img/logos/lacen.png";
 import dive from "assets/img/logos/divelogo.svg";
@@ -90,11 +92,7 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
               <Table
                 tableHeaderColor="info"
                 tableHead={["Nome", "Instituição"]}
-                tableData={[
-                  ["Dakota Rice", "Oud-Turnhout"],
-                  ["Minerva Hooper", "Sinaai-Waas"],
-                  ["Sage Rodriguez","Baileux"],
-                ]}
+                tableData={pesquisadores}
               />
             </CardBody>
             </Card>

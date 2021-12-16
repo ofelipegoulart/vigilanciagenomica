@@ -1,5 +1,5 @@
 import React from "react";
-import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, Brush, ResponsiveContainer } from "recharts";
+import { ComposedChart, Line, Area, AreaChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, Brush, ResponsiveContainer } from "recharts";
 
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -16,6 +16,37 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
 import { histogram } from "variables/HistogramData.js";
+import { areaChart } from "variables/AreaChart.js";
+
+const toPercent = (decimal: number, fixed: number = 0) =>
+  `${(decimal * 100).toFixed(fixed)}%`;
+
+const getPercent = (value: number, total: number) => {
+  const ratio = total > 0 ? value / total : 0;
+
+  return toPercent(ratio, 2);
+};
+
+const renderTooltipContent = (o: any) => {
+  const { payload = [], label } = o;
+  const total = payload.reduce(
+    (result: number, entry: any) => result + entry.value,
+    0
+  );
+
+  return (
+    <div className="customized-tooltip-content">
+      <p className="total">{`${label} (Total: ${total})`}</p>
+      <ul className="list">
+        {payload.map((entry: any, index: number) => (
+          <li key={`item-${index}`} style={{ color: entry.color }}>
+            {`${entry.name}: ${entry.value}(${getPercent(entry.value, total)})`}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -74,12 +105,80 @@ export default function Dashboard() {
           </Card>
         </GridItem>
       </GridContainer>
+
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;
           </div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Variantes Reportadas</h3>
+            <h3 className={classes.cardTitleWhite}>Distribuição de Variantes pelo Estado</h3>
+          </CardHeader>
+            <CardBody>
+            </CardBody>
+        </GridItem>
+      </GridContainer>
+      <div className={classes.cardVariant}>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
+          <Card chart>
+          <div className={classes.chartVariant}>
+          <AreaChart
+      width={500}
+      height={400}
+      data={areaChart}
+      stackOffset="expand"
+      margin={{
+        top: 10,
+        right: 30,
+        left: 0,
+        bottom: 0
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="month" />
+      <YAxis tickFormatter={toPercent} />
+      <Tooltip content={renderTooltipContent} />
+      <Area
+        type="monotone"
+        dataKey="a"
+        stackId="1"
+        stroke="#8884d8"
+        fill="#8884d8"
+      />
+      <Area
+        type="monotone"
+        dataKey="b"
+        stackId="1"
+        stroke="#82ca9d"
+        fill="#82ca9d"
+      />
+      <Area
+        type="monotone"
+        dataKey="c"
+        stackId="1"
+        stroke="#ffc658"
+        fill="#ffc658"
+      />
+    </AreaChart>
+          </div>
+            <CardBody>
+              <h4 className={classes.cardTitle}></h4>
+              <p className={classes.cardCategory}>
+                <span className={classes.successText}>
+                </span>{" "}
+              </p>
+            </CardBody>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      </div>
+
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
+          <div className={classes.spacing}>&nbsp;
+          </div>
+          <CardHeader color="info">
+            <h3 className={classes.cardTitleWhite}>Volume de Sequenciamento por Mês</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
