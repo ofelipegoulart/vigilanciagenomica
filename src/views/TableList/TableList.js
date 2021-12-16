@@ -48,7 +48,7 @@ export default function TableList() {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="info">
-            <h2 className={classes.cardTitleWhite}>Variantes por Regional</h4>
+            <h3 className={classes.cardTitleWhite}>Variantes por Regional</h3>
           </CardHeader>
           <CardBody>
             <Table
