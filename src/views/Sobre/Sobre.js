@@ -71,17 +71,19 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
             <img src={ufsc} className={classes.ufscLogo}/>
             </div>
             <div className={classes.row2}>
-            <img src={nubioinfo} className={classes.nubioinfoLogo}/>
             <img src={bioinfo} className={classes.bioinfoLogo}/>
+            <img src={nubioinfo} className={classes.nubioinfoLogo}/>
             <img src={lbmms} className={classes.lbmmsLogo}/>
             <img src={lva} className={classes.lvaLogo}/>
             </div>
             <div className={classes.row3}>
+            <img src={biomehub} className={classes.biomehubLogo}/>
+            <img src={capes} className={classes.capesLogo}/>
+            <img src={ifsc} className={classes.ifscLogo}/>
+            </div>
+            <div className={classes.row4}>
             <img src={dive} className={classes.diveLogo}/>
             <img src={lacen} className={classes.lacenLogo}/>
-            <img src={biomehub} className={classes.biomehubLogo}/>
-            <img src={ifsc} className={classes.ifscLogo}/>
-            <img src={capes} className={classes.capesLogo}/>
             </div>
             </Card>
             </GridItem>
