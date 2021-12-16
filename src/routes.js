@@ -5,7 +5,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
 import Dashboard from "views/Dashboard/Dashboard.js";
 import PerfilVariantes from "views/PerfilVariantes/PerfilVariantes.js";
-import TableList from "views/TableList/TableList.js";
+import PainelSC from "views/PainelSC/PainelSC.js";
 import Typography from "views/Typography/Typography.js";
 import Relatorios from "views/Relatorios/Icons.js";
 import Sobre from "views/Sobre/Sobre.js";
@@ -24,7 +24,7 @@ const dashboardRoutes = [
     path: "/painelSC",
     name: "Painel SC",
     icon: "bar_chart",
-    component: TableList,
+    component: PainelSC,
     layout: "/dashboard",
   },
   {
