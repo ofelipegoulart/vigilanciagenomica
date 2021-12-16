@@ -28,9 +28,9 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <Icon>search</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Número de Pares Sequenciados&nbsp;</p>
+              <p className={classes.cardCategory}>Número de Variantes Identificadas&nbsp;</p>
               <h3 className={classes.cardTitle}>
-                30 <small>pares</small>
+                12 <small>variantes</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -45,7 +45,7 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <Icon>check_circle_outline</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Número de Amostras Identificadas</p>
+              <p className={classes.cardCategory}>Número de Amostras Analisadas</p>
               <h3 className={classes.cardTitle}>
                 2 <small>amostras</small>
               </h3>
