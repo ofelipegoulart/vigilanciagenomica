@@ -97,7 +97,7 @@ export default function Admin({ ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"Rede de Vigilância Genômica do Estado de Santa Catarina"}
+        logoText={"Genoma COVID SC"}
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}
