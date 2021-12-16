@@ -89,26 +89,11 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
             <CardBody>
               <Table
                 tableHeaderColor="info"
-                tableHead={["ID", "Name", "Country", "City", "Salary"]}
+                tableHead={["Nome", "Instituição"]}
                 tableData={[
-                  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-                  ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-                  ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-                  [
-                    "4",
-                    "Philip Chaney",
-                    "$38,735",
-                    "Korea, South",
-                    "Overland Park",
-                  ],
-                  [
-                    "5",
-                    "Doris Greene",
-                    "$63,542",
-                    "Malawi",
-                    "Feldkirchen in Kärnten",
-                  ],
-                  ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"],
+                  ["Dakota Rice", "Oud-Turnhout"],
+                  ["Minerva Hooper", "Sinaai-Waas"],
+                  ["Sage Rodriguez","Baileux"],
                 ]}
               />
             </CardBody>
