@@ -20,7 +20,7 @@ export default function Footer(props) {
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
-            Desenvolvido pelo Laboratório de Bioinformática da UFSC
+            Desenvolvido por Núcleo de Bioinformática da UFSC
           </span>
         </p>
       </div>
