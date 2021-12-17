@@ -13,7 +13,6 @@ import CardAvatar from "components/Card/CardAvatar.js";
 import Table from "components/Table/Table.js";
 
 import { pesquisadores } from "variables/Tables/SobreProjeto.js";
-
 import bioinfo from "assets/img/logos/bioinfo.png";
 import ufsc from "assets/img/logos/UFSClogo.png";
 import ses from "assets/img/logos/seslogo.png";
@@ -25,10 +24,7 @@ import lva from "assets/img/logos/lvalogo.png";
 import lbmms from "assets/img/logos/lbmmslogo.png";
 import nubioinfo from "assets/img/logos/nubioinfologo.png";
 import capes from "assets/img/logos/capeslogo.png";
-
-
 import biomehub from "assets/img/logos/biomehublogo.png";
-
 import styles from "assets/jss/material-dashboard-react/views/iconsStyle.js";
 
 const useStyles = makeStyles(styles);
