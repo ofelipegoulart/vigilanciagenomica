@@ -81,11 +81,6 @@ const iconsStyle = {
     marginLeft: "auto",
     marginRight: "auto",
   },
-  nubioinfoLogo: {
-    width:"25%",
-    paddingTop:"60px",
-    paddingBottom:"60px",
-  },
   bioinfoLogo: {
     width:"20%",
     paddingTop:"60px",
@@ -106,11 +101,16 @@ const iconsStyle = {
   row3: {
     display: "flex",
     justifyContent: "space-between",
-    width:"860px",
+    width:"840px",
     height:"290px",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "30px",
+  },
+  nubioinfoLogo: {
+    width:"21%",
+    paddingTop:"60px",
+    paddingBottom:"60px",
   },
   ifscLogo: {
     width:"25%",
@@ -126,23 +126,27 @@ const iconsStyle = {
     paddingLeft:"10px",
     paddingRight:"10px",
   },
-  biomehubLogo: {
-    width:"24%",
-    padding:"35px",
-  },
   row4: {
     display: "flex",
     justifyContent: "space-between",
-    width:"600px",
+    width:"900px",
     height:"260px",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "50px",
     marginBottom:"50px",
   },
+  biomehubLogo: {
+    width:"25%",
+    padding:"15px",
+  },
   diveLogo: {
-    width:"35%",
+    width:"23%",
     padding:"30px",
+  },
+  lacenLogo: {
+    width:"25%",
+    padding:"15px",
   },
 };
 
