@@ -294,6 +294,28 @@ const sidebarStyle = (theme) => ({
       bottom: "13px",
     },
   },
+  logos: {
+    display:"flex",
+    justifyContent:"space-between",
+    width:"150px",
+    height:"80px",
+    marginTop: "30px",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  fapescLogo: {
+  },
+  ufscLogo: {
+  },
+  sesLogo: {
+    display:"flex",
+    width:"102px",
+    height:"60px",
+    marginTop: "25px",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+
 });
 
 export default sidebarStyle;

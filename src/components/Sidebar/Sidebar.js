@@ -16,6 +16,10 @@ import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 
+import ufscpb from "assets/img/pblogos/ufscpb.png";
+import fapescpb from "assets/img/logos/fapesclogo.png";
+import ses from "assets/img/logos/seslogo.png";
+
 const useStyles = makeStyles(styles);
 
 export default function Sidebar(props) {
@@ -78,6 +82,11 @@ export default function Sidebar(props) {
           </NavLink>
         );
       })}
+      <div className={classes.logos}>
+        <img src={fapescpb} className={classes.fapescLogo}/>
+        <img src={ufscpb} className={classes.ufscLogo}/>
+      </div>
+      <img src={ses} className={classes.sesLogo}/>
     </List>
   );
   var brand = (
@@ -87,8 +96,6 @@ export default function Sidebar(props) {
           [classes.logoLinkRTL]: props.rtlActive,
         })}
       >
-        <div className={classes.logoImage}>
-        </div>
         {logoText}
       </span>
     </div>

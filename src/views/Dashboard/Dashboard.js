@@ -1,5 +1,5 @@
 import React from "react";
-import { ComposedChart, Line, Area, AreaChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, Brush, ResponsiveContainer } from "recharts";
+import { ComposedChart, Area, AreaChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, Brush, ResponsiveContainer } from "recharts";
 
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -202,7 +202,6 @@ export default function Dashboard() {
           <Tooltip />
           <Legend wrapperStyle={{ bottom: -5}} />
           <Bar dataKey="pv" barSize={60} fill="#a8a8a8" />
-          <Line type="monotone" dot={false} strokeWidth={1.4} dataKey="uv" stroke="#0D47A1" />
           </ComposedChart>
           </ResponsiveContainer>
           </div>
