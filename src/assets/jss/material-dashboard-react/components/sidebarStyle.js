@@ -70,6 +70,7 @@ const sidebarStyle = (theme) => ({
       bottom: "0",
 
       height: "1px",
+      top:"170px",
       right: "15px",
       width: "calc(100% - 30px)",
       backgroundColor: "rgba(" + hexToRgb(grayColor[6]) + ", 0.3)",
@@ -94,15 +95,16 @@ const sidebarStyle = (theme) => ({
     textAlign: "right",
   },
   logoImage: {
-    width: "30px",
+    width: "96%",
     display: "inline-block",
     maxHeight: "30px",
     marginLeft: "10px",
     marginRight: "15px",
   },
   img: {
-    width: "35px",
-    top: "22px",
+    width: "100%",
+    top: "0px",
+    left:"0px",
     position: "absolute",
     verticalAlign: "middle",
     border: "0",
@@ -124,10 +126,11 @@ const sidebarStyle = (theme) => ({
       height: "100%",
       content: '""',
       display: "block",
+      opacity: ".8",
     },
   },
   list: {
-    marginTop: "20px",
+    marginTop: "150px",
     paddingLeft: "0",
     paddingTop: "0",
     paddingBottom: "0",
@@ -282,7 +285,7 @@ const sidebarStyle = (theme) => ({
   sidebarWrapper: {
     position: "relative",
     height: "calc(100vh - 75px)",
-    overflow: "auto",
+    overflow: "hidden",
     width: "260px",
     zIndex: "4",
     overflowScrolling: "touch",
@@ -294,28 +297,17 @@ const sidebarStyle = (theme) => ({
       bottom: "13px",
     },
   },
+
   logos: {
     display:"flex",
     justifyContent:"space-between",
-    width:"150px",
-    height:"80px",
-    marginTop: "30px",
+    width:"190px",
+    height:"50px",
+    marginTop: "18px",
     marginLeft: "auto",
     marginRight: "auto",
   },
-  fapescLogo: {
-  },
-  ufscLogo: {
-  },
-  sesLogo: {
-    display:"flex",
-    width:"102px",
-    height:"60px",
-    marginTop: "25px",
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
-
-});
+}
+  );
 
 export default sidebarStyle;

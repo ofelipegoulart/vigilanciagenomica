@@ -30,7 +30,7 @@ Seja bem-vindo(a) ao acesso restrito da <b>Rede de Vigilância Genômica do Esta
 <p>Esta é a área interna do projeto. Aqui, serão inseridos os arquivos que alimentarão o projeto.
 Na aba <b>CSV Metadados,</b> insira os arquivos .csv que contém as amostras.</p>
             <p>
-Caso perca sua senha ou tenha algum problema durante o uso da plataforma, por favor contate o e-mail ________@______.____ e estaremos de prontidão para resolver sua situação.<br></br>
+Caso perca sua senha ou tenha algum problema durante o uso da plataforma, por favor contate o e-mail bionfolab.ccb@contato.ufsc.br e estaremos de prontidão para resolver sua situação.<br></br>
             </p>
 
           </CardBody>

@@ -13,11 +13,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
 import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
-
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 
+import fapesc from "assets/img/logos/fapesclogo.png";
 import ufscpb from "assets/img/pblogos/ufscpb.png";
-import fapescpb from "assets/img/logos/fapesclogo.png";
 import ses from "assets/img/logos/seslogo.png";
 
 const useStyles = makeStyles(styles);
@@ -83,21 +82,19 @@ export default function Sidebar(props) {
         );
       })}
       <div className={classes.logos}>
-        <img src={fapescpb} className={classes.fapescLogo}/>
+        <img src={fapesc} className={classes.fapescLogo}/>
         <img src={ufscpb} className={classes.ufscLogo}/>
+        <img src={ses} className={classes.sesLogo}/>
       </div>
-      <img src={ses} className={classes.sesLogo}/>
+
     </List>
   );
   var brand = (
     <div className={classes.logo}>
-      <span
-        className={classNames(classes.logoLink, {
-          [classes.logoLinkRTL]: props.rtlActive,
-        })}
-      >
+        <div className={classes.logoImage}>
+          <img src={logo} alt="logo" className={classes.img} />
+        </div>
         {logoText}
-      </span>
     </div>
   );
   return (
@@ -121,9 +118,6 @@ export default function Sidebar(props) {
           <div className={classes.sidebarWrapper}>
             {props.rtlActive ? <RTLNavbarLinks /> : <AdminNavbarLinks />}
             {links}
-            <ListItem button className={classes.itemLink} onClick={() => console.log('clicou')}>
-              <ListItemText primary="Logoff"  className={classes.itemText}/>
-              </ListItem>
           </div>
           {image !== undefined ? (
             <div

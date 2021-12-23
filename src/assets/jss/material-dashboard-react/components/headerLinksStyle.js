@@ -126,14 +126,18 @@ const headerLinksStyle = (theme) => ({
   },
   "@media (min-width: 320px) and (max-width:1024px)": {
     linkText: {
-      marginRight: "15px",
+      position: "absolute",
+      top:"120px",
+      right: "15px",
       textAlign: "right",
       color:"white ! important",
       textDecoration: "none",
     },
     update: {
+      position: "absolute",
+      top:"140px",
+      right: "15px",
       color: "white",
-      marginLeft:"15px",
     }
   },
 });

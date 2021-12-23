@@ -13,7 +13,7 @@ import Navbar from "components/Navbars/PrivateNavbarLinks.js";
 import privateroutes from "privateRoutes.js";
 
 import bgImage from "assets/img/sidebar-1.png";
-import logo from "assets/img/reactlogo.png";
+import logo from "assets/img/logo.png";
 
 import List from "@material-ui/core/List";
 
