@@ -1,10 +1,4 @@
 const pesquisadores = [
-  ["André Motta Ribeiro", "Secretaria do Estado da Saúde"],
-  ["Eduardo Macário", "Superintendência de Vigilância"],
-
-  ["Fábio Zabot Holthausen", "FAPESC"],
-  ["Pedro Alexandre Valetim Neto", "FAPESC"],
-
   ["Marlei Pickler Debiasi dos Anjos", "LACEN/SC"],
   ["Darcita Buerger Rovaris", "LACEN/SC"],
   ["Ariane Nicaretta Amorim", "LACEN/SC"],

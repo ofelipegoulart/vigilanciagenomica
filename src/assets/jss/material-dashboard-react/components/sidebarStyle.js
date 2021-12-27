@@ -73,7 +73,6 @@ const sidebarStyle = (theme) => ({
       top:"170px",
       right: "15px",
       width: "calc(100% - 30px)",
-      backgroundColor: "rgba(" + hexToRgb(grayColor[6]) + ", 0.3)",
     },
   },
   logoLink: {
@@ -119,6 +118,7 @@ const sidebarStyle = (theme) => ({
     left: "0",
     backgroundSize: "cover",
     backgroundPosition: "center center",
+    opacity: ".9",
     "&:after": {
       position: "absolute",
       zIndex: "3",
@@ -126,7 +126,6 @@ const sidebarStyle = (theme) => ({
       height: "100%",
       content: '""',
       display: "block",
-      opacity: ".8",
     },
   },
   list: {
@@ -302,7 +301,7 @@ const sidebarStyle = (theme) => ({
     display:"flex",
     justifyContent:"space-between",
     width:"190px",
-    height:"50px",
+    height:"45px",
     marginTop: "18px",
     marginLeft: "auto",
     marginRight: "auto",

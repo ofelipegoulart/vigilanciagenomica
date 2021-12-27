@@ -121,7 +121,8 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
-          <div className={classes.chartVariant}>
+          <div className={classes.areaVariant}>
+          <ResponsiveContainer width={'90%'} aspect={1.9}>
           <AreaChart
       width={500}
       height={400}
@@ -160,14 +161,10 @@ export default function Dashboard() {
         fill="#ffc658"
       />
     </AreaChart>
+    </ResponsiveContainer>
           </div>
-            <CardBody>
-              <h4 className={classes.cardTitle}></h4>
-              <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                </span>{" "}
-              </p>
-            </CardBody>
+            <div className={classes.spacing}>&nbsp;
+            </div>
           </Card>
         </GridItem>
       </GridContainer>
@@ -205,13 +202,8 @@ export default function Dashboard() {
           </ComposedChart>
           </ResponsiveContainer>
           </div>
-            <CardBody>
-              <h4 className={classes.cardTitle}></h4>
-              <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                </span>{" "}
-              </p>
-            </CardBody>
+          <div className={classes.spacing}>&nbsp;
+          </div>
           </Card>
         </GridItem>
       </GridContainer>

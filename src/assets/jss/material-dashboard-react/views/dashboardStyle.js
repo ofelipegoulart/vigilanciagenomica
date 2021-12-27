@@ -79,11 +79,9 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
-
   spacing: {
     paddingBottom: "10px",
   },
-
   chartVariant: {
     marginTop: "80px",
     position: "relative",
@@ -92,13 +90,20 @@ const dashboardStyle = {
     overflowX: "hidden",
     overflowY: "hidden",
   },
-
   cardVariant : {
     marginTop: "-80px",
     marginLeft: "0px",
     marginRight: "0px",
-  }
-
+  },
+  areaVariant: {
+    marginTop: "80px",
+    marginLeft:"20px",
+    position: "relative",
+    left: "0",
+    right: "0",
+    overflowX: "hidden",
+    overflowY: "hidden",
+  },
 };
 
 export default dashboardStyle;

@@ -45,29 +45,6 @@ export default function PainelSC() {
   const classes = useStyles();
   return (
     <div>
-    <GridContainer>
-      <GridItem xs={12} sm={12} md={12}>
-        <Card>
-          <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Variantes por Regional</h3>
-          </CardHeader>
-          <CardBody>
-            <Table
-              tableHeaderColor="info"
-              tableHead={["Região", "Total das Amostras Analisadas"]}
-              tableData={[
-                ["Dakota Rice", "Niger"],
-                ["Minerva Hooper", "Curaçao"],
-                ["Sage Rodriguez", "Netherlands"],
-                ["Philip Chaney", "Korea, South"],
-                ["Doris Greene", "Malawi"],
-                ["Mason Porter", "Chile",],
-              ]}
-            />
-          </CardBody>
-        </Card>
-      </GridItem>
-      </GridContainer>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
