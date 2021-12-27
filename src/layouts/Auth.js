@@ -8,7 +8,7 @@ import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
 import jwt_decode from 'jwt-decode';
 import api from "../api.js";
 
-import Sidebar from "components/PrivateSidebar/PrivateSidebar.js";
+import Sidebar from "components/PrivateSidebar/Sidebar.js";
 import Navbar from "components/Navbars/PrivateNavbarLinks.js";
 import privateroutes from "privateRoutes.js";
 

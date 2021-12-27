@@ -14,7 +14,7 @@ import Icon from "@material-ui/core/Icon";
 // core components
 import AdminNavbarLinks from "components/Navbars/PrivateNavbarLinks.js";
 
-import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
+import styles from "assets/jss/material-dashboard-react/components/privateSidebarStyle.js";
 
 const useStyles = makeStyles(styles);
 
