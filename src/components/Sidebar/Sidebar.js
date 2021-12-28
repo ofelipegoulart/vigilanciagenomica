@@ -85,7 +85,6 @@ export default function Sidebar(props) {
       <img src={fapesc} className={classes.fapescLogo}/>
       <img src={ses} className={classes.sesLogo}/>
         <img src={ufscpb} className={classes.ufscLogo}/>
-        <img src={bioinfo} className={classes.bioinfoLogo}/>
       </div>
 
     </List>
