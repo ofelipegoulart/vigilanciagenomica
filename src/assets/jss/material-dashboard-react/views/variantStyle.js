@@ -79,11 +79,9 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
-
   spacing: {
     paddingBottom: "10px",
   },
-
   chartVariant: {
     marginTop:"40px",
     marginRight: "150px",

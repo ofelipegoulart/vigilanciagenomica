@@ -61,7 +61,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Variantes Identificadas&nbsp;</p>
               <h3 className={classes.cardTitle}>
-                12 <small>variantes</small>
+                1 <small>variante</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -78,7 +78,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Amostras Analisadas</p>
               <h3 className={classes.cardTitle}>
-                2 <small>amostras</small>
+                403 <small>amostras</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -95,7 +95,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Municípios Analisados</p>
               <h3 className={classes.cardTitle}>
-                120 <small>municípios</small>
+                74 <small>municípios</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
