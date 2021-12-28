@@ -52,7 +52,7 @@ export default function PerfilVariantes() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
-          <ResponsiveContainer>
+          <ResponsiveContainer width={'100%'} aspect={0.45}>
           <PieChart
             width={250}
             height={250}
@@ -96,7 +96,7 @@ export default function PerfilVariantes() {
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
             <div className={classes.chartVariant}>
-            <ResponsiveContainer>
+            <ResponsiveContainer width={'100%'} aspect={0.45}>
             <PieChart
               width={250}
               height={250}
