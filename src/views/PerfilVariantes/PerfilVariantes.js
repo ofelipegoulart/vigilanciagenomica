@@ -42,7 +42,7 @@ export default function PerfilVariantes() {
         <div className={classes.spacing}>&nbsp;
         </div>
         <CardHeader color="info">
-          <h3 className={classes.cardTitleWhite}>PC Frequência das Variantes (total)</h3>
+          <h3 className={classes.cardTitleWhite}>Frequência das Variantes (total)</h3>
         </CardHeader>
           <CardBody>
           </CardBody>
@@ -87,7 +87,7 @@ export default function PerfilVariantes() {
           <div className={classes.spacing}>&nbsp;
           </div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>PC Frequência das Variantes (última semana analisada)</h3>
+            <h3 className={classes.cardTitleWhite}>Frequência das Variantes (última semana analisada)</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
