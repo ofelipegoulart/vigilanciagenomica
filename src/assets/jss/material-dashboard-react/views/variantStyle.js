@@ -93,21 +93,45 @@ const dashboardStyle = {
     left: "0",
     right: "0",
   },
-
   cardVariant : {
     marginTop: "-80px",
     marginLeft: "0px",
     marginRight: "0px",
   },
+  chartMobile: {
+    display:"none",
+  },
+
   "@media (min-width: 320px) and (max-width:1024px)": {
-    chartVariant: {
-      marginLeft:"-50px",
+    cardVariantMobile : {
+      marginTop: "-120px",
+      marginLeft: "0px",
       marginRight: "0px",
-      position: "relative",
-      left: "0",
-      right: "0",
     },
-},
+    chartVariantMobile: {
+      marginTop:"90px",
+    },
+    cardTitleWhiteMobile: {
+      color: whiteColor,
+      marginTop: "5px",
+      minHeight: "auto",
+      fontWeight: "400",
+      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+      marginBottom: "5px",
+      textDecoration: "none",
+      "& small": {
+        color: grayColor[1],
+        fontWeight: "400",
+        lineHeight: "1",
+      },
+    },
+    chartDesktop: {
+      display:"none",
+    },
+    chartMobile: {
+      display:"inline",
+    },
+  },
 };
 
 export default dashboardStyle;

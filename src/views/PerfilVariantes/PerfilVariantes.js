@@ -36,12 +36,13 @@ export default function PerfilVariantes() {
 
   return (
     <div>
+    <div className={classes.chartDesktop}>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <div className={classes.spacing}>&nbsp;
         </div>
         <CardHeader color="info">
-          <h3 className={classes.cardTitleWhite}>Frequência das Variantes (total)</h3>
+          <h3 className={classes.cardTitleWhite}>PC Frequência das Variantes (total)</h3>
         </CardHeader>
           <CardBody>
           </CardBody>
@@ -52,7 +53,7 @@ export default function PerfilVariantes() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
-          <ResponsiveContainer width={'100%'} aspect={0.45}>
+          <ResponsiveContainer>
           <PieChart
             width={250}
             height={250}
@@ -74,18 +75,19 @@ export default function PerfilVariantes() {
               <Legend layout="vertical" align="right" verticalAlign="middle" />
         </PieChart>
         </ResponsiveContainer>
-          </div>
+        </div>
           </Card>
         </GridItem>
       </GridContainer>
       </div>
-      <div>
+      </div>
+      <div className={classes.chartDesktop}>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;
           </div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Frequência das Variantes (última semana analisada)</h3>
+            <h3 className={classes.cardTitleWhite}>PC Frequência das Variantes (última semana analisada)</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
@@ -96,7 +98,7 @@ export default function PerfilVariantes() {
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
             <div className={classes.chartVariant}>
-            <ResponsiveContainer width={'100%'} aspect={0.45}>
+            <ResponsiveContainer>
             <PieChart
               width={250}
               height={250}
@@ -123,8 +125,94 @@ export default function PerfilVariantes() {
           </GridItem>
         </GridContainer>
         </div>
+        </div>
+        <div className={classes.chartMobile}>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <div className={classes.spacingMobile}>&nbsp;
+            </div>
+            <CardHeader color="info" className={classes.cardHeaderMobile}>
+              <h3 className={classes.cardTitleWhiteMobile}>Frequência das Variantes (total)</h3>
+            </CardHeader>
+              <CardBody className={classes.cardBodyMobile}>
+              </CardBody>
+          </GridItem>
+        </GridContainer>
+          <div className={classes.cardVariantMobile}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={12}>
+              <Card chart className={classes.cardMobile}>
+              <div className={classes.chartVariantMobile}>
+              <PieChart
+                width={300}
+                height={300}
+                >
+                  <Pie
+                    data={data}
+                    cx={100}
+                    cy={100}
+                    labelLine={false}
+                    label={renderCustomizedLabel}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+                  </Pie>
+                  <Legend layout="horizontal" align="horizontal" verticalAlign="bottom" />
+            </PieChart>
+              </div>
+              </Card>
+            </GridItem>
+          </GridContainer>
+          </div>
+          </div>
+          <div className={classes.chartMobile}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={12}>
+              <div className={classes.spacingMobile}>&nbsp;
+              </div>
+              <CardHeader color="info" className={classes.cardHeaderMobile}>
+                <h3 className={classes.cardTitleWhiteMobile}>Frequência das Variantes (última semana analisada)</h3>
+              </CardHeader>
+                <CardBody className={classes.cardBodyMobile}>
+                </CardBody>
+            </GridItem>
+          </GridContainer>
+            <div className={classes.cardVariantMobile}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={12}>
+                <Card chart className={classes.cardMobile}>
+                <div className={classes.chartVariantMobile}>
+                <PieChart
+                  width={300}
+                  height={300}
+                  >
+                    <Pie
+                      data={data}
+                      cx={100}
+                      cy={100}
+                      labelLine={false}
+                      label={renderCustomizedLabel}
+                      outerRadius={80}
+                      fill="#8884d8"
+                      dataKey="value"
+                    >
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                    </Pie>
+                    <Legend layout="horizontal" align="vertical" verticalAlign="bottom" />
+              </PieChart>
+                </div>
+                </Card>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </div>
       </div>
-    </div>
 
   );
 }
