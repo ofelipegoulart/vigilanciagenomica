@@ -19,7 +19,7 @@ import { histogram } from "variables/HistogramData.js";
 import { areaChart } from "variables/AreaChart.js";
 
 const toPercent = (decimal: number, fixed: number = 0) =>
-  `${(decimal * 100).toFixed()}%`;
+  `${(decimal * 100).toFixed(2)}%`;
 
 const getPercent = (value: number, total: number) => {
   const ratio = total > 0 ? value / total : 0;
