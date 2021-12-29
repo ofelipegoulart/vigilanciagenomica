@@ -1,14 +1,42 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { makeStyles } from "@material-ui/core/styles";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
-import 'leaflet/dist/leaflet.css';
+import map from "assets/img/map.png";
+
+const styles = {
+  containerMap: {
+    width:"95%",
+    marginLeft:"auto",
+    marginRight:"auto",
+    },
+
+  mapSite: {
+    display:"block",
+    width: "100%",
+  },
+
+  overlay: {
+    marginTop:"-300px",
+    marginBottom:"300px",
+    width:"100%",
+    height:"auto",
+    opacity:"0",
+    transition: ".5s ease",
+    textAlign:"center",
+  },
+  text: {
+    color:"#000",
+  },
+};
+
+const useStyles = makeStyles(styles);
 
 export default function Maps() {
-  const position = [-27.267,-51.130]
+  const classes = useStyles();
   return (
     <div>
       <GridContainer>
@@ -20,14 +48,13 @@ export default function Maps() {
           </Card>
         </GridItem>
       </GridContainer>
-      <MapContainer center={position} zoom={7} scrollWheelZoom={false}>
-    <TileLayer
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={[51.505, -0.09]}>
-    </Marker>
-  </MapContainer>
+      <GridContainer>
+      <div className={classes.containerMap}>
+      <a href="https://microreact.org/project/3jY1MQzTVUsBjw1z7DWBMu-genoma-covid-sc" target="_blank">
+        <img src={map} className={classes.mapSite}/>
+      </a>
+      </div>
+      </GridContainer>
     </div>
   );
 };

@@ -84,20 +84,25 @@ const dashboardStyle = {
   },
   chartVariant: {
     marginTop:"40px",
-    marginRight: "150px",
-    marginLeft: "150px",
-    height: "450px",
+    marginRight: "auto",
+    marginLeft: "auto",
     position: "relative",
     left: "0",
     right: "0",
   },
   cardVariant : {
     marginTop: "-80px",
-    marginLeft: "0px",
-    marginRight: "0px",
   },
   chartMobile: {
     display:"none",
+  },
+  rowDesktop: {
+    width:"80%",
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"space-between",
+    marginLeft:"auto",
+    marginRight:"auto",
   },
 
   "@media (min-width: 320px) and (max-width:1024px)": {
