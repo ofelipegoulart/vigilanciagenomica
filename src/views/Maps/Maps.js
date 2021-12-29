@@ -18,19 +18,11 @@ const styles = {
     display:"block",
     width: "100%",
   },
-
-  overlay: {
-    marginTop:"-300px",
-    marginBottom:"300px",
-    width:"100%",
-    height:"auto",
-    opacity:"0",
-    transition: ".5s ease",
+  description: {
+    marginLeft:"auto",
+    marginRight:"auto",
     textAlign:"center",
-  },
-  text: {
-    color:"#000",
-  },
+  }
 };
 
 const useStyles = makeStyles(styles);
@@ -53,6 +45,11 @@ export default function Maps() {
       <a href="https://microreact.org/project/3jY1MQzTVUsBjw1z7DWBMu-genoma-covid-sc" target="_blank">
         <img src={map} className={classes.mapSite}/>
       </a>
+      </div>
+      </GridContainer>
+      <GridContainer>
+      <div className={classes.description}>
+      <p>Acesse o mapa clicando na imagem acima.</p>
       </div>
       </GridContainer>
     </div>

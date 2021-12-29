@@ -5,7 +5,7 @@ import {
   hexToRgb,
 } from "assets/jss/material-dashboard-react.js";
 
-const iconsStyle = {
+const aboutStyle = {
   iframe: {
     width: "100%",
     height: "500px",
@@ -101,16 +101,16 @@ const iconsStyle = {
   row3: {
     display: "flex",
     justifyContent: "space-between",
-    width:"840px",
+    width:"910px",
     height:"290px",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "30px",
   },
   nubioinfoLogo: {
-    width:"21%",
-    paddingTop:"60px",
-    paddingBottom:"60px",
+    width:"31%",
+    paddingTop:"10px",
+    paddingBottom:"10px",
   },
   ifscLogo: {
     width:"25%",
@@ -120,7 +120,7 @@ const iconsStyle = {
     paddingRight:"10px",
   },
   capesLogo: {
-    width:"21%",
+    width:"18%",
     paddingTop:"60px",
     paddingBottom:"60px",
     paddingLeft:"10px",
@@ -398,4 +398,4 @@ const iconsStyle = {
 },
 };
 
-export default iconsStyle;
+export default aboutStyle;

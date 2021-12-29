@@ -25,11 +25,11 @@ import lbmms from "assets/img/logos/lbmmslogo.png";
 import nubioinfo from "assets/img/logos/nubioinfologo.png";
 import capes from "assets/img/logos/capeslogo.png";
 import biomehub from "assets/img/logos/biomehublogo.png";
-import styles from "assets/jss/material-dashboard-react/views/iconsStyle.js";
+import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function Icons() {
+export default function Sobre() {
   const classes = useStyles();
   return (
     <div>
