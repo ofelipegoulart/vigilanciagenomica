@@ -7,7 +7,7 @@ import Dashboard from "views/Dashboard/Dashboard.js";
 import PerfilVariantes from "views/PerfilVariantes/PerfilVariantes.js";
 import PainelSC from "views/PainelSC/PainelSC.js";
 import Typography from "views/Typography/Typography.js";
-import Relatorios from "views/Relatorios/Icons.js";
+import Relatorios from "views/Relatorios/relatorios.js";
 import Sobre from "views/Sobre/Sobre.js";
 import Maps from "views/Maps/Maps.js";
 

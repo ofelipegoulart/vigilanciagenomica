@@ -299,6 +299,7 @@ const sidebarStyle = (theme) => ({
 
   logos: {
     display:"flex",
+    alignItems:"flex-start",
     justifyContent:"space-between",
     width:"190px",
     height:"45px",
@@ -306,6 +307,18 @@ const sidebarStyle = (theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
   },
+  fapescLogo: {
+    width:"23%",
+    height:"45px",
+  },
+  sesLogo: {
+    width:"40%",
+    height:"45px",
+  },
+  ufscLogo: {
+    width:"18%",
+    height:"45px",
+  }
 }
   );
 

@@ -10,6 +10,8 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
+import relatorio1 from "reports/example.pdf";
+
 import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -24,7 +26,7 @@ export default function Icons() {
             <h1>Relatórios</h1>
           </CardHeader>
           <CardBody>
-            <p> <b>Exemplo de relatório:</b> <a href="https://vigilanciagenomica.herokuapp.com/dashboard/relatorios/#"> Link de exemplo [em PDF] </a>
+            <p> <b>Exemplo de relatório:</b> <a href={relatorio1}> Link de exemplo [em PDF] </a>
  </p>
           </CardBody>
         </Card>

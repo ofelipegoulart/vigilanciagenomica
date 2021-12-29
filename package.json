@@ -14,7 +14,6 @@
     "dotenv": "^10.0.0",
     "history": "5.0.0",
     "jwt-decode": "^3.1.2",
-    "leaflet": "^1.7.1",
     "node-env-run": "^4.0.2",
     "nookies": "^2.5.2",
     "perfect-scrollbar": "1.5.1",

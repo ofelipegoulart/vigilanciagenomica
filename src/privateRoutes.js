@@ -1,11 +1,11 @@
 import { BrowserRouter, Router, Switch, Redirect } from "react-router-dom";
 // core components/views for Admin layout
-import Tutorial from "PrivateViews/Tutorial/Tutorial.js";
-import CSVMetadados from "PrivateViews/CSVmetadados/CSVmetadados.js";
-import Extração from "PrivateViews/Extracao/Extracao.js";
-import Sequenciamento from "PrivateViews/Sequenciamento/Sequenciamento.js";
-import Análise from "PrivateViews/Analise/Analise.js";
-import Liberação from "PrivateViews/Liberacao/Liberacao.js";
+import Tutorial from "private/Tutorial/Tutorial.js";
+import CSVMetadados from "private/CSVmetadados/CSVmetadados.js";
+import Extração from "private/Extracao/Extracao.js";
+import Sequenciamento from "private/Sequenciamento/Sequenciamento.js";
+import Análise from "private/Analise/Analise.js";
+import Liberação from "private/Liberacao/Liberacao.js";
 
 const dashboardRoutes = [
   {
