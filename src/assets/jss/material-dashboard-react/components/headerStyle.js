@@ -36,45 +36,17 @@ const headerStyle = () => ({
   flex: {
     flex: 1,
   },
-  title: {
-    ...defaultFont,
-    lineHeight: "30px",
-    fontSize: "18px",
-    borderRadius: "3px",
-    textTransform: "none",
-    color: "inherit",
-    margin: "0",
-    "&:hover,&:focus": {
-      background: "transparent",
-    },
-  },
   appResponsive: {
     top: "8px",
   },
-  primary: {
-    backgroundColor: primaryColor[0],
-    color: whiteColor,
-    ...defaultBoxShadow,
+  titlePageMobile: {
+    visibility:"hidden",
   },
-  info: {
-    backgroundColor: infoColor[0],
-    color: whiteColor,
-    ...defaultBoxShadow,
-  },
-  success: {
-    backgroundColor: successColor[0],
-    color: whiteColor,
-    ...defaultBoxShadow,
-  },
-  warning: {
-    backgroundColor: warningColor[0],
-    color: whiteColor,
-    ...defaultBoxShadow,
-  },
-  danger: {
-    backgroundColor: dangerColor[0],
-    color: whiteColor,
-    ...defaultBoxShadow,
+  "@media screen and (min-width:200px) and (max-width:960px)": {
+    titlePageMobile: {
+      visibility:"visible ! important",
+      fontWeight:"400",
+    },
   },
 });
 

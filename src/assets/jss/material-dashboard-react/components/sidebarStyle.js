@@ -129,7 +129,7 @@ const sidebarStyle = (theme) => ({
     },
   },
   list: {
-    marginTop: "150px",
+    marginTop: "115px",
     paddingLeft: "0",
     paddingTop: "0",
     paddingBottom: "0",
@@ -301,25 +301,31 @@ const sidebarStyle = (theme) => ({
     display:"flex",
     alignItems:"flex-start",
     justifyContent:"space-between",
-    width:"190px",
-    height:"45px",
-    marginTop: "18px",
-    marginLeft: "auto",
+    width:"250px",
+    height:"50px",
+    position: "fixed",
+    bottom: "0",
+    marginBottom:"3px",
+    marginLeft: "3px",
     marginRight: "auto",
   },
   fapescLogo: {
-    width:"23%",
-    height:"45px",
+    width:"19%",
+    height:"50px",
   },
   sesLogo: {
-    width:"40%",
-    height:"45px",
+    width:"35%",
+    height:"50px",
   },
   ufscLogo: {
-    width:"18%",
-    height:"45px",
-  }
-}
-  );
+    width:"15%",
+    height:"50px",
+  },
+  bioinfoLogo: {
+    width:"15%",
+    height:"50px",
+  },
+
+});
 
 export default sidebarStyle;

@@ -31,11 +31,10 @@ export default function Header(props) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
-          
+          <div className={classes.titlePageMobile}>
+            <p>Genoma COVID SC</p>
+          </div>
         </div>
-        <Hidden smDown implementation="css">
-          {<AdminNavbarLinks />}
-        </Hidden>
         <Hidden mdUp implementation="css">
           <IconButton
             color="inherit"

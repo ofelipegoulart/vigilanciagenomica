@@ -18,6 +18,7 @@ import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.
 import fapesc from "assets/img/logos/fapesclogo.png";
 import ufscpb from "assets/img/pblogos/ufscpb.png";
 import ses from "assets/img/logos/seslogo.png";
+import bioinfo from "assets/img/logos/bioinfo.png";
 
 const useStyles = makeStyles(styles);
 
@@ -84,7 +85,10 @@ export default function Sidebar(props) {
       <div className={classes.logos}>
       <img src={fapesc} className={classes.fapescLogo}/>
       <img src={ses} className={classes.sesLogo}/>
+      <img src={bioinfo} className={classes.bioinfoLogo}/>
       <img src={ufscpb} className={classes.ufscLogo}/>
+      </div>
+      <div className={classes.logos}>
       </div>
 
     </List>
