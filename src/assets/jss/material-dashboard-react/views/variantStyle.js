@@ -90,7 +90,7 @@ const dashboardStyle = {
     display:"none",
   },
   rowDesktop: {
-    width:"70%",
+    width:"80%",
     display:"flex",
     flexDirection:"row",
     justifyContent:"space-between",
