@@ -79,16 +79,9 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
-  spacing: {
-    paddingBottom: "10px",
-  },
   chartVariant: {
-    marginTop:"40px",
     marginRight: "auto",
     marginLeft: "auto",
-    position: "relative",
-    left: "0",
-    right: "0",
   },
   cardVariant : {
     marginTop: "-80px",
@@ -97,7 +90,7 @@ const dashboardStyle = {
     display:"none",
   },
   rowDesktop: {
-    width:"80%",
+    width:"70%",
     display:"flex",
     flexDirection:"row",
     justifyContent:"space-between",
@@ -107,9 +100,8 @@ const dashboardStyle = {
 
   "@media (min-width: 320px) and (max-width:1024px)": {
     cardVariantMobile : {
-      marginTop: "-120px",
-      marginLeft: "0px",
-      marginRight: "0px",
+      marginTop: "-80px",
+      position:"relative",
     },
     chartVariantMobile: {
       marginTop:"90px",
@@ -133,6 +125,8 @@ const dashboardStyle = {
     },
     chartMobile: {
       display:"inline",
+      width:"100%",
+      marginLeft:"-30px",
     },
   },
 };

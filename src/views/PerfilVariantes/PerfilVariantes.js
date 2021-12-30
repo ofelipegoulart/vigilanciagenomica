@@ -49,7 +49,7 @@ export default function PerfilVariantes() {
   return (
     <div>
     <GridContainer>
-      <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={10} sm={10} md={10}>
         <Card plain>
           <CardHeader plain color="info">
             <h1>Frequência das Variantes</h1>
@@ -57,12 +57,12 @@ export default function PerfilVariantes() {
           </Card>
         </GridItem>
       </GridContainer>
-    <div className={classes.spacing}>&nbsp;</div>
+    <div>&nbsp;</div>
     <div className={classes.rowDesktop}>
     <div className={classes.chartDesktop}>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
-        <div className={classes.spacing}>&nbsp;</div>
+        <div>&nbsp;</div>
         <CardHeader color="info">
           <h3 className={classes.cardTitleWhite}>Total</h3>
         </CardHeader>
@@ -72,7 +72,7 @@ export default function PerfilVariantes() {
     </GridContainer>
       <div className={classes.cardVariant}>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={12}>
+        <GridItem xs={12} sm={12} md={11}>
           <Card chart>
           <div className={classes.chartVariant}>
           <PieChart
@@ -104,7 +104,7 @@ export default function PerfilVariantes() {
       <div className={classes.chartDesktop}>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
-          <div className={classes.spacing}>&nbsp;</div>
+          <div>&nbsp;</div>
           <CardHeader color="info">
             <h3 className={classes.cardTitleWhite}>Última Semana</h3>
           </CardHeader>
@@ -114,7 +114,7 @@ export default function PerfilVariantes() {
       </GridContainer>
         <div className={classes.cardVariant}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={12}>
+          <GridItem xs={12} sm={12} md={11}>
             <Card chart>
             <div className={classes.chartVariant}>
             <PieChart
@@ -147,17 +147,17 @@ export default function PerfilVariantes() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <div className={classes.spacingMobile}>&nbsp;</div>
-            <CardHeader color="info" className={classes.cardHeaderMobile}>
-              <h3 className={classes.cardTitleWhiteMobile}>Frequência das Variantes (total)</h3>
+            <CardHeader color="info">
+              <h3 className={classes.cardTitleWhiteMobile}>Total</h3>
             </CardHeader>
-              <CardBody className={classes.cardBodyMobile}>
+              <CardBody>
               </CardBody>
           </GridItem>
         </GridContainer>
           <div className={classes.cardVariantMobile}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={12}>
-              <Card chart className={classes.cardMobile}>
+              <Card chart>
               <div className={classes.chartVariantMobile}>
               <PieChart
                 width={300}
@@ -177,7 +177,7 @@ export default function PerfilVariantes() {
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
                   </Pie>
-                  <Legend layout="horizontal" align="horizontal" verticalAlign="bottom" />
+                  <Legend layout="horizontal" align="vertical" verticalAlign="bottom" />
             </PieChart>
               </div>
               </Card>
@@ -188,19 +188,19 @@ export default function PerfilVariantes() {
           </div>
           <div className={classes.chartMobile}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={12}>
+            <GridItem xs={10} sm={12} md={12}>
               <div className={classes.spacingMobile}>&nbsp;</div>
-              <CardHeader color="info" className={classes.cardHeaderMobile}>
-                <h3 className={classes.cardTitleWhiteMobile}>Frequência das Variantes (última semana)</h3>
+              <CardHeader color="info">
+                <h3 className={classes.cardTitleWhiteMobile}>Última Semana</h3>
               </CardHeader>
-                <CardBody className={classes.cardBodyMobile}>
+                <CardBody>
                 </CardBody>
             </GridItem>
           </GridContainer>
             <div className={classes.cardVariantMobile}>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={12}>
-                <Card chart className={classes.cardMobile}>
+              <GridItem xs={10} sm={12} md={12}>
+                <Card chart>
                 <div className={classes.chartVariantMobile}>
                 <PieChart
                   width={300}
@@ -226,9 +226,8 @@ export default function PerfilVariantes() {
                 </Card>
               </GridItem>
             </GridContainer>
-          </div>
-        </div>
-      </div>
-
+            </div>
+            </div>
+            </div>
   );
 }
