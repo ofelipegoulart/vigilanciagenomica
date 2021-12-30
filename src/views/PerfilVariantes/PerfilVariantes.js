@@ -49,7 +49,7 @@ export default function PerfilVariantes() {
   return (
     <div>
     <GridContainer>
-      <GridItem xs={10} sm={10} md={10}>
+      <GridItem xs={12} sm={12} md={12}>
         <Card plain>
           <CardHeader plain color="info">
             <h1>Frequência das Variantes</h1>
@@ -72,7 +72,7 @@ export default function PerfilVariantes() {
     </GridContainer>
       <div className={classes.cardVariant}>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={11}>
+        <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
           <PieChart
@@ -114,7 +114,7 @@ export default function PerfilVariantes() {
       </GridContainer>
         <div className={classes.cardVariant}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={11}>
+          <GridItem xs={12} sm={12} md={12}>
             <Card chart>
             <div className={classes.chartVariant}>
             <PieChart
@@ -188,7 +188,7 @@ export default function PerfilVariantes() {
           </div>
           <div className={classes.chartMobile}>
           <GridContainer>
-            <GridItem xs={10} sm={12} md={12}>
+            <GridItem xs={12} sm={12} md={12}>
               <div className={classes.spacingMobile}>&nbsp;</div>
               <CardHeader color="info">
                 <h3 className={classes.cardTitleWhiteMobile}>Última Semana</h3>
@@ -199,7 +199,7 @@ export default function PerfilVariantes() {
           </GridContainer>
             <div className={classes.cardVariantMobile}>
             <GridContainer>
-              <GridItem xs={10} sm={12} md={12}>
+              <GridItem xs={12} sm={12} md={12}>
                 <Card chart>
                 <div className={classes.chartVariantMobile}>
                 <PieChart

@@ -101,7 +101,6 @@ const dashboardStyle = {
   "@media (min-width: 320px) and (max-width:1024px)": {
     cardVariantMobile : {
       marginTop: "-80px",
-      position:"relative",
     },
     chartVariantMobile: {
       marginTop:"90px",
@@ -125,8 +124,7 @@ const dashboardStyle = {
     },
     chartMobile: {
       display:"inline",
-      width:"100%",
-      marginLeft:"-30px",
+      marginLeft:"-25px",
     },
   },
 };
