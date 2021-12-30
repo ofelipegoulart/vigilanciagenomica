@@ -306,8 +306,8 @@ const sidebarStyle = (theme) => ({
     position: "fixed",
     bottom: "0",
     marginBottom:"3px",
-    marginLeft: "3px",
-    marginRight: "auto",
+    marginRight: "5px",
+    marginLeft: "5px",
   },
   fapescLogo: {
     width:"19%",

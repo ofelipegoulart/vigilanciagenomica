@@ -35,6 +35,9 @@ const headerStyle = () => ({
   },
   flex: {
     flex: 1,
+    opacity:"0",
+    fontWeight:"400",
+    color:"#555",
   },
   appResponsive: {
     top: "8px",
@@ -43,9 +46,8 @@ const headerStyle = () => ({
     visibility:"hidden",
   },
   "@media screen and (min-width:200px) and (max-width:960px)": {
-    titlePageMobile: {
-      visibility:"visible ! important",
-      fontWeight:"400",
+    flex: {
+      opacity:"1",
     },
   },
 });
