@@ -228,6 +228,92 @@ export default function PerfilVariantes() {
             </GridContainer>
             </div>
             </div>
+            <div className={classes.rowTablet}>
+            <div className={classes.chartTablet}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={12}>
+                <div>&nbsp;</div>
+                <CardHeader color="info">
+                  <h3 className={classes.cardTitleWhiteTablet}>Total</h3>
+                </CardHeader>
+                  <CardBody>
+                  </CardBody>
+              </GridItem>
+            </GridContainer>
+              <div className={classes.cardVariantTablet}>
+              <GridContainer>
+                <GridItem xs={12} sm={12} md={12}>
+                  <Card chart>
+                  <div className={classes.chartVariantTablet}>
+                  <PieChart
+                    width={400}
+                    height={400}
+                    >
+                      <Pie
+                        data={data}
+                        cx={150}
+                        cy={200}
+                        labelLine={false}
+                        label={renderCustomizedLabel}
+                        outerRadius={100}
+                        fill="#8884d8"
+                        dataKey="value"
+                      >
+                    {data.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                      </Pie>
+                      <Legend layout="vertical" align="right" verticalAlign="middle" />
+                </PieChart>
+                </div>
+                  </Card>
+                </GridItem>
+              </GridContainer>
+              </div>
+              </div>
+              <div className={classes.chartTablet}>
+              <GridContainer>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div>&nbsp;</div>
+                  <CardHeader color="info">
+                    <h3 className={classes.cardTitleWhiteTablet}>Última Semana</h3>
+                  </CardHeader>
+                    <CardBody>
+                    </CardBody>
+                </GridItem>
+              </GridContainer>
+                <div className={classes.cardVariantTablet}>
+                <GridContainer>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <Card chart>
+                    <div className={classes.chartVariantTablet}>
+                    <PieChart
+                      width={400}
+                      height={400}
+                      >
+                        <Pie
+                          data={data}
+                          cx={150}
+                          cy={200}
+                          labelLine={false}
+                          label={renderCustomizedLabel}
+                          outerRadius={100}
+                          fill="#8884d8"
+                          dataKey="value"
+                        >
+                      {data.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                        </Pie>
+                        <Legend layout="vertical" align="right" verticalAlign="middle" />
+                  </PieChart>
+                  </div>
+                    </Card>
+                  </GridItem>
+                </GridContainer>
+                </div>
+                </div>
+                </div>
             </div>
   );
 }

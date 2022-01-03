@@ -97,8 +97,10 @@ const dashboardStyle = {
     marginLeft:"auto",
     marginRight:"auto",
   },
-
-  "@media (min-width: 320px) and (max-width:1024px)": {
+  chartTablet: {
+    display:"none",
+  },
+  "@media (min-width: 320px) and (max-width:400px)": {
     cardVariantMobile : {
       marginTop: "-80px",
     },
@@ -126,6 +128,40 @@ const dashboardStyle = {
       display:"inline",
       marginLeft:"-25px",
     },
+    chartTablet: {
+      display:"none",
+    },
+  },
+  "@media (min-width: 400px) and (max-width:960px)": {
+    cardVariantTablet : {
+      marginTop: "-80px",
+    },
+    chartVariantTablet: {
+      marginTop:"90px",
+    },
+    cardTitleWhiteTablet: {
+      color: whiteColor,
+      marginTop: "5px",
+      minHeight: "auto",
+      fontWeight: "400",
+      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+      marginBottom: "5px",
+      textDecoration: "none",
+      "& small": {
+        color: grayColor[1],
+        fontWeight: "400",
+        lineHeight: "1",
+      },
+    },
+    chartDesktop: {
+      display:"none",
+    },
+    chartMobile: {
+      display:"none",
+    },
+    chartTablet: {
+      display:"inline",
+    }
   },
 };
 
