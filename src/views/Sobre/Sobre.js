@@ -84,20 +84,6 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
             </Card>
             </GridItem>
             </GridContainer>
-            <Card>
-            <CardHeader color="info">
-              <h3 className={classes.cardTitleWhite}>
-                Equipe do Projeto
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <Table
-                tableHeaderColor="info"
-                tableHead={["Nome", "Instituição"]}
-                tableData={pesquisadores}
-              />
-            </CardBody>
-            </Card>
             </div>
     </div>
   );
