@@ -23,7 +23,7 @@ export default function Icons() {
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
           <CardHeader plain color="info">
-            <h1>Relatórios</h1>
+            <h1>Relatórios Técnicos</h1>
           </CardHeader>
           <CardBody>
             <p> <b>Exemplo de relatório:</b> <a href={relatorio1}> Link de exemplo [em PDF] </a>

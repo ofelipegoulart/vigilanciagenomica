@@ -1,5 +1,5 @@
 import React from "react";
-import { ComposedChart, Area, AreaChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, Brush, ResponsiveContainer } from "recharts";
+import {  Area, AreaChart, Bar, Brush, CartesianGrid, Cell, ComposedChart, Legend, PieChart, Pie, ResponsiveContainer, Scatter, Tooltip, XAxis, YAxis } from "recharts";
 
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -17,6 +17,7 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import { histogram } from "variables/HistogramData.js";
 import { areaChart } from "variables/AreaChart.js";
+import { data } from "variables/PieData.js";
 
 const toPercent = (decimal: number, fixed: number = 0) =>
   `${(decimal * 100).toFixed(2)}%`;
@@ -47,6 +48,34 @@ const renderTooltipContent = (o: any) => {
     </div>
   );
 };
+
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+  index
+}: any) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+  <text
+    x={x}
+    y={y}
+    fill="white"
+    textAnchor={x > cx ? "start" : "end"}
+    dominantBaseline="central"
+  >
+    {`${(percent * 100).toFixed(0)}%`}
+  </text>
+);
+}
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -106,6 +135,7 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
 
+
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;
@@ -122,7 +152,7 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.areaVariant}>
-          <ResponsiveContainer width={'90%'} aspect={1.9}>
+          <ResponsiveContainer width={'70%'} aspect={1.9}>
           <AreaChart
       width={500}
       height={400}
@@ -130,7 +160,7 @@ export default function Dashboard() {
       stackOffset="expand"
       margin={{
         top: 10,
-        right: 30,
+        right: 0,
         left: 0,
         bottom: 0
       }}
@@ -170,10 +200,70 @@ export default function Dashboard() {
       </GridContainer>
       </div>
 
+      <div className={classes.spacing}>&nbsp;</div>
+      <div>
+      <GridContainer>
+      <GridItem xs={12} sm={12} md={6}>
+      <CardHeader color="info">
+        <h3 className={classes.cardTitleWhite}>Total</h3>
+      </CardHeader>
+      <Card chart className={classes.pieChartVariant}>
+      <PieChart
+            width={400}
+            height={400}
+            >
+              <Pie
+                data={data}
+                cx={150}
+                cy={200}
+                labelLine={false}
+                label={renderCustomizedLabel}
+                outerRadius={100}
+                fill="#8884d8"
+                dataKey="value"
+              >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+              </Pie>
+              <Legend layout="vertical" align="right" verticalAlign="middle" />
+        </PieChart>
+        </Card>
+      </GridItem>
+      <GridItem xs={12} sm={12} md={6}>
+      <CardHeader color="info">
+        <h3 className={classes.cardTitleWhite}>Última Semana</h3>
+      </CardHeader>
+      <Card chart className={classes.pieChartVariant}>
+      <PieChart
+            width={400}
+            height={400}
+            >
+              <Pie
+                data={data}
+                cx={150}
+                cy={200}
+                labelLine={false}
+                label={renderCustomizedLabel}
+                outerRadius={100}
+                fill="#8884d8"
+                dataKey="value"
+              >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+              </Pie>
+              <Legend layout="vertical" align="right" verticalAlign="middle" />
+        </PieChart>
+        </Card>
+      </GridItem>
+      </GridContainer>
+      </div>
+
+
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
-          <div className={classes.spacing}>&nbsp;
-          </div>
+          <div className={classes.spacing}>&nbsp;</div>
           <CardHeader color="info">
             <h3 className={classes.cardTitleWhite}>Volume de Sequenciamento por Mês</h3>
           </CardHeader>
@@ -208,6 +298,6 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
       </div>
-    </div>
+      </div>
   );
 }

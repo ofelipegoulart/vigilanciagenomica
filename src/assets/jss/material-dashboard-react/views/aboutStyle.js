@@ -43,6 +43,7 @@ const aboutStyle = {
   },
   row1: {
     display: "flex",
+    alignItems:"flex-start",
     justifyContent: "space-between",
     alignContent: "center",
     width:"955px",
@@ -74,6 +75,7 @@ const aboutStyle = {
   },
   row2: {
     display: "flex",
+    alignItems:"flex-start",
     justifyContent: "space-between",
     alignContent: "center",
     width:"860px",
@@ -100,6 +102,7 @@ const aboutStyle = {
   },
   row3: {
     display: "flex",
+    alignItems:"flex-start",
     justifyContent: "space-between",
     width:"910px",
     height:"290px",
@@ -128,6 +131,7 @@ const aboutStyle = {
   },
   row4: {
     display: "flex",
+    alignItems:"flex-start",
     justifyContent: "space-between",
     width:"900px",
     height:"260px",
@@ -148,9 +152,11 @@ const aboutStyle = {
     width:"25%",
     padding:"15px",
   },
+
   "@media (min-width:200px) and (max-width:640px)": {
     row1: {
       display:"flex",
+      alignItems:"flex-start",
       justifyContent:"space-between",
       flexDirection:"column",
       marginLeft: "auto",
@@ -182,6 +188,7 @@ const aboutStyle = {
     },
     row2: {
       display:"flex",
+      alignItems:"flex-start",
       justifyContent:"space-between",
       flexDirection:"column",
       marginTop:"30px",
@@ -213,6 +220,7 @@ const aboutStyle = {
     },
     row3: {
       display:"flex",
+      alignItems:"flex-start",
       justifyContent:"space-between",
       flexDirection:"column",
       marginTop:"30px",
@@ -244,6 +252,7 @@ const aboutStyle = {
     },
     row4: {
       display:"flex",
+      alignItems:"flex-start",
       justifyContent:"space-between",
       flexDirection:"column",
       marginLeft: "auto",
@@ -275,6 +284,7 @@ const aboutStyle = {
   "@media (min-width:640px) and (max-width:1250px)": {
     row1: {
     display:"flex",
+    alignItems:"flex-start",
     justifyContent:"space-between",
     flexDirection:"row",
     marginLeft: "auto",
@@ -306,6 +316,7 @@ const aboutStyle = {
   },
   row2: {
     display:"flex",
+    alignItems:"flex-start",
     justifyContent:"space-between",
     flexDirection:"row",
     marginTop:"30px",
@@ -337,6 +348,7 @@ const aboutStyle = {
   },
   row3: {
     display:"flex",
+    alignItems:"flex-start",
     justifyContent:"space-between",
     flexDirection:"row",
     marginTop:"30px",
@@ -368,6 +380,7 @@ const aboutStyle = {
   },
   row4: {
     display:"flex",
+    alignItems:"flex-start",
     justifyContent:"space-between",
     flexDirection:"row",
     marginLeft: "auto",

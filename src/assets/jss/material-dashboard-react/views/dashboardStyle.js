@@ -96,14 +96,14 @@ const dashboardStyle = {
     marginRight: "0px",
   },
   areaVariant: {
-    marginTop: "80px",
+    marginTop:"80px",
     marginLeft:"20px",
-    position: "relative",
-    left: "0",
-    right: "0",
     overflowX: "hidden",
     overflowY: "hidden",
   },
+  pieChartVariant: {
+    marginTop:"-40px",
+  }
 };
 
 export default dashboardStyle;
