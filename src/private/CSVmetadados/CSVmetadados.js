@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Hidden from "@material-ui/core/Hidden";
@@ -9,18 +9,45 @@ import GridContainer from "components/Grid/GridContainer.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
+import styles from "assets/jss/material-dashboard-react/privateViews/aboutStyle.js";
 import typographyStyles from "assets/jss/material-dashboard-react/components/typographyStyle.js";
 
 const useStyles = makeStyles(styles);
 const useTypographyStyles = makeStyles(typographyStyles);
 
-export default function Icons() {
+export const CSVMetadados = ({onSuccess}) => {
   const classes = useStyles();
   const typographyClasses = useTypographyStyles();
+  const [files, setFiles] = useState([]);
+
+   const onInputChange = (e) => {
+       setFiles(e.target.files)
+   };
+
+   const onSubmit = (e) => {
+       e.preventDefault();
+
+       const data = new FormData();
+
+       for(let i = 0; i < files.length; i++) {
+           data.append('file', files[i]);
+       }
+
+  axios.post('//localhost:4000/upload', data)
+      .then((response) => {
+        toast.success('Upload Success');
+        onSuccess(response.data)
+      })
+      .catch((e) => {
+        toast.error('Upload Error')
+      })
+  };
 
   return (
+    <div>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
@@ -36,5 +63,19 @@ export default function Icons() {
         </Card>
       </GridItem>
     </GridContainer>
+    <GridContainer>
+      <GridItem xs={12} sm={12} md={12}>
+        <Card plain>
+        <div className={classes.submitArea}>
+          <form method="post" className={classes.formArea} onSubmit={onSubmit}>
+              <label>Enviar arquivo</label><br/>
+                <input type="file" onChange={onInputChange} className={classes.buttons} accept=".csv"/><br/>
+            <button className={classes.submitButton}>Enviar</button>
+          </form>
+          </div>
+        </Card>
+      </GridItem>
+    </GridContainer>
+    </div>
   );
-}
+};

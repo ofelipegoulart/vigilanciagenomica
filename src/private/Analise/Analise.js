@@ -17,6 +17,7 @@ const useStyles = makeStyles(styles);
 export default function Icons() {
   const classes = useStyles();
   return (
+    <div>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
@@ -30,5 +31,19 @@ export default function Icons() {
         </Card>
       </GridItem>
     </GridContainer>
+    <GridContainer>
+      <GridItem xs={12} sm={12} md={12}>
+        <Card plain>
+          <form method="post" action="#" id="#">
+            <div>
+              <label>Enviar arquivo</label>
+                <input type="file" />
+            </div>
+            <button>Enviar</button>
+          </form>
+        </Card>
+      </GridItem>
+    </GridContainer>
+    </div>
   );
 }

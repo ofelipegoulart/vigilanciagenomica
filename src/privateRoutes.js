@@ -1,7 +1,7 @@
 import { BrowserRouter, Router, Switch, Redirect } from "react-router-dom";
 // core components/views for Admin layout
 import Tutorial from "private/Tutorial/Tutorial.js";
-import CSVMetadados from "private/CSVmetadados/CSVmetadados.js";
+import { CSVMetadados } from "private/CSVmetadados/CSVmetadados.js";
 import Extração from "private/Extracao/Extracao.js";
 import Sequenciamento from "private/Sequenciamento/Sequenciamento.js";
 import Análise from "private/Analise/Analise.js";
@@ -50,7 +50,6 @@ const dashboardRoutes = [
     component: Liberação,
     layout: "/privado",
   },
-
 ];
 
 export default dashboardRoutes;
