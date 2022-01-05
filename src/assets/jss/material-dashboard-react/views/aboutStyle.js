@@ -46,7 +46,6 @@ const aboutStyle = {
     alignItems:"flex-start",
     justifyContent: "space-between",
     alignContent: "center",
-    width:"955px",
     height:"340px",
     marginLeft: "auto",
     marginRight: "auto",
@@ -151,6 +150,9 @@ const aboutStyle = {
   lacenLogo: {
     width:"25%",
     padding:"15px",
+  },
+  spacing: {
+    marginTop:"30px",
   },
 
   "@media (min-width:200px) and (max-width:640px)": {

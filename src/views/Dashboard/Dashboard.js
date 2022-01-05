@@ -152,10 +152,8 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.areaVariant}>
-          <ResponsiveContainer width={'70%'} aspect={1.9}>
+          <ResponsiveContainer width={'90%'} aspect={1.7}>
           <AreaChart
-      width={500}
-      height={400}
       data={areaChart}
       stackOffset="expand"
       margin={{
@@ -208,6 +206,7 @@ export default function Dashboard() {
         <h3 className={classes.cardTitleWhite}>Total</h3>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
+      <ResponsiveContainer minHeight={400}>
       <PieChart
             width={400}
             height={400}
@@ -226,8 +225,9 @@ export default function Dashboard() {
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
               </Pie>
-              <Legend layout="vertical" align="right" verticalAlign="middle" />
+              <Legend layout="vertical" align="right" />
         </PieChart>
+        </ResponsiveContainer>
         </Card>
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
@@ -235,6 +235,7 @@ export default function Dashboard() {
         <h3 className={classes.cardTitleWhite}>Última Semana</h3>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
+      <ResponsiveContainer minHeight={400}>
       <PieChart
             width={400}
             height={400}
@@ -253,8 +254,9 @@ export default function Dashboard() {
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
               </Pie>
-              <Legend layout="vertical" align="right" verticalAlign="middle" />
+              <Legend layout="vertical" align="right" />
         </PieChart>
+        </ResponsiveContainer>
         </Card>
       </GridItem>
       </GridContainer>

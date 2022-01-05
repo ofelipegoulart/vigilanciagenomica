@@ -59,32 +59,28 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
         </GridContainer>
         <div className={classes.cardLogos}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={12}>
-            <Card>
-            <div className={classes.row1}>
-            <img src={ses} className={classes.sesLogo}/>
-            <img src={fapesc} className={classes.fapescLogo}/>
-            <img src={ufsc} className={classes.ufscLogo}/>
-            </div>
-            <div className={classes.row2}>
-            <img src={bioinfo} className={classes.bioinfoLogo}/>
-            <img src={lbmms} className={classes.lbmmsLogo}/>
-            <img src={lva} className={classes.lvaLogo}/>
-            </div>
-            <div className={classes.row3}>
-            <img src={nubioinfo} className={classes.nubioinfoLogo}/>
-            <img src={capes} className={classes.capesLogo}/>
-            <img src={ifsc} className={classes.ifscLogo}/>
-            </div>
-            <div className={classes.row4}>
-            <img src={biomehub} className={classes.biomehubLogo}/>
-            <img src={dive} className={classes.diveLogo}/>
-            <img src={lacen} className={classes.lacenLogo}/>
-            </div>
-            </Card>
-            </GridItem>
-            </GridContainer>
-            </div>
+        <Card chart>
+        <GridItem xs={6} sm={6} md={12} style={{textAlign:"center", height:"200px",marginTop:"90px"}}>
+        <img src={ses} style={{height:"160px"}}/>
+        <img src={fapesc} style={{marginLeft:"30px", height:"180px"}} />
+        <img src={ufsc} style={{marginLeft:"30px", height:"210px"}}/>
+        <img src={bioinfo} style={{marginLeft:"30px",height:"200px"}} />
+        </GridItem>
+        <GridItem xs={6} sm={6} md={12} style={{textAlign:"center", marginTop:"60px", height:"200px"}}>
+        <img src={nubioinfo} style={{marginLeft:"30px", height:"190px", margin:"0"}}/>
+        <img src={lbmms} style={{ height:"210px"}}/>
+        <img src={lva} style={{marginLeft:"30px",height:"190px"}}/>
+        <img src={capes} style={{marginLeft:"30px", height:"180px"}}/>
+        </GridItem>
+        <GridItem xs={6} sm={6} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
+        <img src={biomehub} style={{marginLeft:"30px", height:"200px"}}/>
+        <img src={lacen} style={{marginLeft:"30px",height:"210px"}}/>
+        <img src={dive} style={{marginLeft:"30px", height:"185px"}}/>
+        <img src={ifsc} style={{marginLeft:"30px", height:"200px"}}/>
+        </GridItem>
+        </Card>
+        </GridContainer>
+        </div>
     </div>
   );
 }
