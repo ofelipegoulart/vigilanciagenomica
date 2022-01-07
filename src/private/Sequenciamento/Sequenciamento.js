@@ -10,13 +10,14 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
-import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
+import styles from "assets/jss/material-dashboard-react/privateViews/sequenciamentoStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Icons() {
   const classes = useStyles();
   return (
+    <div>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
@@ -30,5 +31,22 @@ export default function Icons() {
         </Card>
       </GridItem>
     </GridContainer>
+    <GridContainer>
+      <div className={classes.container}>
+        <form className={classes.form}>
+          <label htmlFor="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" className={classes.inputSeq}/><br />
+
+          <label htmlFor="email">E-mail</label>
+          <input type="text" id="email" name="email" placeholder="Seu e-mail" className={classes.inputSeq} /><br />
+
+          <label htmlFor="mensagem">Link</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Link do Sequenciamento" className={classes.inputTextSeq}></textarea><br />
+
+          <input type="submit" value="Enviar" className={classes.submitButton}/><br />
+        </form>
+    </div>
+    </GridContainer>
+    </div>
   );
 }
