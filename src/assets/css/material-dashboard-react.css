@@ -109,6 +109,15 @@ blockquote p {
   font-style: italic;
 }
 
+td,tr,th {
+    border: 1px solid #ddd;
+    padding:3px;
+}
+
+table {
+  border-collapse: collapse
+}
+
 body,
 h2,
 h3,

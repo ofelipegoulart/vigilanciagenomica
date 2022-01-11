@@ -12,7 +12,7 @@ import CardBody from "components/Card/CardBody.js";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import styles from "assets/jss/material-dashboard-react/privateViews/aboutStyle.js";
+import styles from "assets/jss/material-dashboard-react/privateViews/metadadosStyle.js";
 import typographyStyles from "assets/jss/material-dashboard-react/components/typographyStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -47,7 +47,7 @@ export const CSVMetadados = ({onSuccess}) => {
   };
 
   return (
-    <div>
+    <div style={{marginTop:"-40px"}}>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>

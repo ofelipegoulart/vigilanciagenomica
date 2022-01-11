@@ -17,6 +17,7 @@ const useStyles = makeStyles(styles);
 export default function Icons() {
   const classes = useStyles();
   return (
+    <div style={{marginTop:"-40px"}}>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
@@ -30,5 +31,6 @@ export default function Icons() {
         </Card>
       </GridItem>
     </GridContainer>
+    </div>
   );
 }

@@ -49,6 +49,7 @@ const aboutStyle = {
     marginRight:"auto",
   },
   formArea: {
+    marginTop:"-20px",
     textAlign:"center",
   },
   buttons: {

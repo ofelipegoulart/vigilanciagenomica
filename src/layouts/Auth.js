@@ -1,6 +1,10 @@
 import React, {useEffect} from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
+// creates a beautiful scrollbar
+import PerfectScrollbar from "perfect-scrollbar";
+import "perfect-scrollbar/css/perfect-scrollbar.css";
+
 import { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/layouts/authStyle.js";
@@ -16,6 +20,8 @@ import bgImage from "assets/img/sidebar-1.png";
 import logo from "assets/img/logo.png";
 
 import List from "@material-ui/core/List";
+
+let ps;
 
 const switchRoutes = (
   <Switch>
@@ -54,6 +60,9 @@ export default function App( { ...rest } ) {
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  // ref to help us initialize PerfectScrollbar on windows devices
+  const mainPanel = React.createRef();
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -69,10 +78,35 @@ export default function App( { ...rest } ) {
     }
   };
 
+  const resizeFunction = () => {
+    if (window.innerWidth >= 960) {
+      setMobileOpen(false);
+    }
+  };
+
+  // initialize and destroy the PerfectScrollbar plugin
+  React.useEffect(() => {
+    if (navigator.platform.indexOf("Win") > -1) {
+      ps = new PerfectScrollbar(mainPanel.current, {
+        suppressScrollX: true,
+        suppressScrollY: false,
+      });
+      document.body.style.overflow = "hidden";
+    }
+    window.addEventListener("resize", resizeFunction);
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      if (navigator.platform.indexOf("Win") > -1) {
+        ps.destroy();
+      }
+      window.removeEventListener("resize", resizeFunction);
+    };
+  }, [mainPanel]);
+
   return (
     <div>
       {userToken ? (
-        <div className={classes.mainPanel}>
+        <div className={classes.mainPanel} ref={mainPanel}>
         <Sidebar
           routes={privateroutes}
           logoText={"Acesso Privado da Rede de Vigilância Genômica de Santa Catarina"}
