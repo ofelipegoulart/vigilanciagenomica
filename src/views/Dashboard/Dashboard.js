@@ -90,7 +90,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Variantes Identificadas&nbsp;</p>
               <h3 className={classes.cardTitle}>
-                1 <small>variante</small>
+                6 <small>variantes</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -107,7 +107,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Amostras Analisadas</p>
               <h3 className={classes.cardTitle}>
-                403 <small>amostras</small>
+                1050 <small>amostras</small>
               </h3>
             </CardHeader>
             <CardFooter stats>

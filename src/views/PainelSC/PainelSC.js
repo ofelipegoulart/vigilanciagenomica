@@ -45,7 +45,6 @@ export default function PainelSC() {
   const classes = useStyles();
   return (
     <div>
-
     </div>
   );
 }

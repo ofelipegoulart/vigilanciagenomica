@@ -27,13 +27,13 @@ const dashboardRoutes = [
     component: PainelSC,
     layout: "/dashboard",
   },
-  {
-    path: "/perfil-variantes",
-    name: "Perfil das Variantes",
-    icon: "coronavirus",
-    component: PerfilVariantes,
-    layout: "/dashboard",
-  },
+  // {
+  //   path: "/perfil-variantes",
+  //   name: "Perfil das Variantes",
+  //   icon: "coronavirus",
+  //   component: PerfilVariantes,
+  //   layout: "/dashboard",
+  // },
   {
     path: "/mapa",
     name: "Mapa",
