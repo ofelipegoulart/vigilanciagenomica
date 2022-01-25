@@ -23,7 +23,7 @@ export default function Icons() {
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:4000/searchinfo/?name=${name}`);
+      const response = await fetch(`https://pgsql.sites.ufsc.br:5432/searchinfo/?name=${name}`);
 
       const parseResponse = await response.json();
 

@@ -3,7 +3,7 @@ require('dotenv').config()
 
 
 const axiosJWT = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? 'https://vigilanciagenomica-backend.herokuapp.com/api/' : 'http://localhost:4000/api/'
+  baseURL: process.env.NODE_ENV === 'production' ? 'https://covidsc-backend.sites.ufsc.br/api' : 'http://localhost:4000/api/'
 })
 
 axiosJWT.interceptors.request.use(
