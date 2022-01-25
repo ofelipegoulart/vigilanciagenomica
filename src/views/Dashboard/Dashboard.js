@@ -15,67 +15,6 @@ import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
-import { histogram } from "variables/HistogramData.js";
-import { areaChart } from "variables/AreaChart.js";
-import { data } from "variables/PieData.js";
-
-const toPercent = (decimal: number, fixed: number = 0) =>
-  `${(decimal * 100).toFixed(2)}%`;
-
-const getPercent = (value: number, total: number) => {
-  const ratio = total > 0 ? value / total : 0;
-
-  return toPercent(ratio, 2);
-};
-
-const renderTooltipContent = (o: any) => {
-  const { payload = [], label } = o;
-  const total = payload.reduce(
-    (result: number, entry: any) => result + entry.value,
-    0
-  );
-
-  return (
-    <div className="customized-tooltip-content">
-      <p className="total">{`${label} (Total: ${total})`}</p>
-      <ul className="list">
-        {payload.map((entry: any, index: number) => (
-          <li key={`item-${index}`} style={{ color: entry.color }}>
-            {`${entry.name}: ${entry.value}(${getPercent(entry.value, total)})`}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index
-}: any) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-  <text
-    x={x}
-    y={y}
-    fill="white"
-    textAnchor={x > cx ? "start" : "end"}
-    dominantBaseline="central"
-  >
-    {`${(percent * 100).toFixed(0)}%`}
-  </text>
-);
-}
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -189,37 +128,22 @@ export default function Dashboard() {
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
       <CardHeader color="info">
-        <h3 className={classes.cardTitleWhite}>Última Semana</h3>
+        <h3 className={classes.cardTitleWhite}>Últimos 30 dias</h3>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
-      <ResponsiveContainer minHeight={400}>
-      <PieChart
-            width={400}
-            height={400}
-            >
-              <Pie
-                data={data}
-                cx={150}
-                cy={200}
-                labelLine={false}
-                label={renderCustomizedLabel}
-                outerRadius={100}
-                fill="#8884d8"
-                dataKey="value"
-              >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-              </Pie>
-              <Legend layout="vertical" align="right" />
-        </PieChart>
-        </ResponsiveContainer>
+          <iframe
+    src="https://covidsc-api.sites.ufsc.br/public/question/ddf983ff-3c20-4b32-8f6d-46f7f0e9cdd7"
+    frameborder="0"
+    width="450"
+    height="450"
+    allowtransparency
+    style={{marginTop:"10px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+    >
+    </iframe>
         </Card>
       </GridItem>
       </GridContainer>
       </div>
-
-
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;</div>
@@ -235,21 +159,15 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
           <div className={classes.chartVariant}>
-          <ResponsiveContainer width={'95%'} aspect={2.3}>
-          <ComposedChart
-          width={1200}
-          height={600}
-          data={histogram}
-          margin={{ top: 0, right: 10, bottom: 5, left: -5 }}
-          >
-          <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="name" allowDataOverflow="true" interval="preserveStart" />
-          <YAxis domain={[0, 'dataMax + 1000']} allowDataOverflow="true" />
-          <Tooltip />
-          <Legend wrapperStyle={{ bottom: -5}} />
-          <Bar dataKey="pv" barSize={60} fill="#a8a8a8" />
-          </ComposedChart>
-          </ResponsiveContainer>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/04bd787f-b310-4038-80e4-4e1c2882b1c1"
+    frameborder="0"
+    width="900"
+    height="600"
+    allowtransparency
+    style={{marginTop:"-45px",scroll:"hidden"}}
+    >
+    </iframe>
           </div>
           <div className={classes.spacing}>&nbsp;
           </div>
