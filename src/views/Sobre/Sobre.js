@@ -25,6 +25,9 @@ import lbmms from "assets/img/logos/lbmmslogo.png";
 import nubioinfo from "assets/img/logos/nubioinfologo.png";
 import capes from "assets/img/logos/capeslogo.png";
 import biomehub from "assets/img/logos/biomehublogo.png";
+import genolab from "assets/img/logos/genolablogo.png";
+import vigilanciasaude from "assets/img/logos/vigilanciasaudelogo.png";
+import fiocruz from "assets/img/logos/fiocruzlogo.jpg";
 import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -77,6 +80,11 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
         <img src={lacen} style={{marginLeft:"30px",height:"210px"}}/>
         <img src={dive} style={{marginLeft:"30px", height:"185px"}}/>
         <img src={ifsc} style={{marginLeft:"30px", height:"200px"}}/>
+        </GridItem>
+        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
+        <img src={fiocruz} style={{marginLeft:"30px", width:"290px"}}/>
+        <img src={vigilanciasaude} style={{marginRight:"30px",height:"140px"}}/>
+        <img src={genolab} style={{marginLeft:"30px", width:"290px"}}/>
         </GridItem>
         </Card>
         </GridContainer>

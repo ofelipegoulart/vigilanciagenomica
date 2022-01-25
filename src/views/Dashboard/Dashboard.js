@@ -151,48 +151,14 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
-          <div className={classes.areaVariant}>
-          <ResponsiveContainer width={'90%'} aspect={1.7}>
-          <AreaChart
-      data={areaChart}
-      stackOffset="expand"
-      margin={{
-        top: 10,
-        right: 0,
-        left: 0,
-        bottom: 0
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="month" />
-      <YAxis tickFormatter={toPercent} />
-      <Tooltip content={renderTooltipContent} />
-      <Area
-        type="monotone"
-        dataKey="a"
-        stackId="1"
-        stroke="#8884d8"
-        fill="#8884d8"
-      />
-      <Area
-        type="monotone"
-        dataKey="b"
-        stackId="1"
-        stroke="#82ca9d"
-        fill="#82ca9d"
-      />
-      <Area
-        type="monotone"
-        dataKey="c"
-        stackId="1"
-        stroke="#ffc658"
-        fill="#ffc658"
-      />
-    </AreaChart>
-    </ResponsiveContainer>
-          </div>
-            <div className={classes.spacing}>&nbsp;
-            </div>
+            <iframe
+      src="http://covidsc-api.sites.ufsc.br/public/question/56d35422-31b7-4661-8ce6-63694f52c804"
+      frameborder="0"
+      width="900"
+      height="600"
+      allowtransparency
+      style={{marginTop:"40px",marginLeft:"auto",marginRight:"auto"}}
+  ></iframe>
           </Card>
         </GridItem>
       </GridContainer>
