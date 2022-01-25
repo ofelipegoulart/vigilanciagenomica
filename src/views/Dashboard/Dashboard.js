@@ -176,28 +176,15 @@ export default function Dashboard() {
         <h3 className={classes.cardTitleWhite}>Total</h3>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
-      <ResponsiveContainer minHeight={400}>
-      <PieChart
-            width={400}
-            height={400}
-            >
-              <Pie
-                data={data}
-                cx={150}
-                cy={200}
-                labelLine={false}
-                label={renderCustomizedLabel}
-                outerRadius={100}
-                fill="#8884d8"
-                dataKey="value"
-              >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-              </Pie>
-              <Legend layout="vertical" align="right" />
-        </PieChart>
-        </ResponsiveContainer>
+            <iframe
+      src="https://covidsc-api.sites.ufsc.br/public/question/ddf983ff-3c20-4b32-8f6d-46f7f0e9cdd7"
+      frameborder="0"
+      width="450"
+      height="450"
+      allowtransparency
+      style={{marginTop:"10px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+      >
+  </iframe>
         </Card>
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
@@ -237,7 +224,7 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;</div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Volume de Sequenciamento por Mês</h3>
+            <h3 className={classes.cardTitleWhite}>Volume de Processamento por Mês</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
