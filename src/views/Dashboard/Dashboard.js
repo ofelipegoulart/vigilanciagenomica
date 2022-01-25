@@ -200,6 +200,10 @@ export default function Dashboard() {
 
       <div className={classes.spacing}>&nbsp;</div>
       <div>
+      <CardHeader color="info">
+        <h3 className={classes.cardTitleWhite}>Total de Variantes pelo Estado</h3>
+      </CardHeader>
+      <div className={classes.spacing} style={{marginBottom:"10px"}}>&nbsp;</div>
       <GridContainer>
       <GridItem xs={12} sm={12} md={6}>
       <CardHeader color="info">

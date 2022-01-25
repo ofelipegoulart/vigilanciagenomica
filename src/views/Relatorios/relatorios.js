@@ -33,17 +33,17 @@ export default function Icons() {
           </CardHeader>
           <CardBody>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE41}> Semana Epidemiológica 41 [em PDF] </a> </p>
-            <p> <b>Relatório Técnico Semanal:</b> <a href={SE41}> Semana Epidemiológica 42 [em PDF] </a> </p>
-            <p> <b>Relatório Técnico Semanal:</b> <a href={SE41}> Semana Epidemiológica 43 [em PDF] </a> </p>
-            <p> <b>Relatório Técnico Semanal:</b> <a href={SE41}> Semana Epidemiológica 44 [em PDF] </a> </p>
+            <p> <b>Relatório Técnico Semanal:</b> <a href="#"> Semana Epidemiológica 42 [em PDF] </a> </p>
+            <p> <b>Relatório Técnico Semanal:</b> <a href="#"> Semana Epidemiológica 43 [em PDF] </a> </p>
+            <p> <b>Relatório Técnico Semanal:</b> <a href="#"> Semana Epidemiológica 44 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE45}> Semana Epidemiológica 45 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE46}> Semana Epidemiológica 46 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE47}> Semana Epidemiológica 47 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE48}> Semana Epidemiológica 48 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE49}> Semana Epidemiológica 49 [em PDF] </a> </p>
             <p> <b>Relatório Técnico Semanal:</b> <a href={SE50}> Semana Epidemiológica 50 [em PDF] </a> </p>
-            <p> <b>Relatório Técnico Semanal:</b> <a href={SE51}> Semana Epidemiológica 51 [em PDF] </a> </p>
-            <p> <b>Relatório Técnico Semanal:</b> <a href={SE52}> Semana Epidemiológica 21 [em PDF] </a> </p>
+            <p> <b>Relatório Técnico Semanal:</b> <a href="#"> Semana Epidemiológica 51 [em PDF] </a> </p>
+            <p> <b>Relatório Técnico Semanal:</b> <a href={SE52}> Semana Epidemiológica 52 [em PDF] </a> </p>
           </CardBody>
         </Card>
       </GridItem>
