@@ -81,10 +81,10 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
         <img src={dive} style={{marginLeft:"30px", height:"185px"}}/>
         <img src={ifsc} style={{marginLeft:"30px", height:"200px"}}/>
         </GridItem>
-        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
-        <img src={fiocruz} style={{marginLeft:"30px", width:"290px"}}/>
-        <img src={vigilanciasaude} style={{marginRight:"30px",height:"140px"}}/>
-        <img src={genolab} style={{marginLeft:"30px", width:"290px"}}/>
+        <GridItem xs={12} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
+        <img src={fiocruz} style={{marginLeft:"-15px", width:"290px"}}/>
+        <img src={vigilanciasaude} style={{marginRight:"0px", marginBottom:"30px",marginTop:"30px",height:"140px"}}/>
+        <img src={genolab} style={{marginLeft:"30px", marginBottom:"60px",marginTop:"60px",width:"230px"}}/>
         </GridItem>
         </Card>
         </GridContainer>
