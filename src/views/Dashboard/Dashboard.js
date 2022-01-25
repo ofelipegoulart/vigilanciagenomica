@@ -29,7 +29,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Número de Variantes Identificadas&nbsp;</p>
               <h3 className={classes.cardTitle}>
-                6 <small>variantes</small>
+               6 <small>variantes</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -116,7 +116,7 @@ export default function Dashboard() {
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
             <iframe
-      src="https://covidsc-api.sites.ufsc.br/public/question/ddf983ff-3c20-4b32-8f6d-46f7f0e9cdd7"
+      src="http://covidsc-api.sites.ufsc.br/public/question/7091bf37-9cde-4d02-ac1d-66c87268cc39"
       frameborder="0"
       width="450"
       height="450"
@@ -148,7 +148,7 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;</div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Volume de Processamento por Mês</h3>
+            <h3 className={classes.cardTitleWhite}>Volume de Amostras Processadas por Mês</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
@@ -162,10 +162,9 @@ export default function Dashboard() {
           <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/04bd787f-b310-4038-80e4-4e1c2882b1c1"
     frameborder="0"
-    width="900"
+    width="100%"
     height="600"
     allowtransparency
-    style={{marginTop:"-45px",scroll:"hidden"}}
     >
     </iframe>
           </div>
