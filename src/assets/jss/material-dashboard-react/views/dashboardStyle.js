@@ -103,7 +103,17 @@ const dashboardStyle = {
   },
   pieChartVariant: {
     marginTop:"-40px",
-  }
+  },
+  numbersCard: {
+    position:"relative",
+    bottom:"65px"
+  },
+  "@media screen and (min-width:1580px)": {
+    numbersCard: {
+      position:"relative",
+      top:"0px",
+      },
+  },
 };
 
 export default dashboardStyle;

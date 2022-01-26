@@ -32,9 +32,9 @@ export default function Dashboard() {
               <iframe
                 src="http://covidsc-api.sites.ufsc.br/public/question/855a77e1-52f1-4cc6-8d29-53559c8a3c0d"
                 frameborder="0"
-                style={{position:"relative",bottom:"30px"}}
+                className={classes.numbersCard}
                 width="68%"
-                height="80%"
+                height="95%"
                 allowtransparency
             ></iframe>
             </CardHeader>
@@ -53,9 +53,9 @@ export default function Dashboard() {
               <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/0c2302b9-2c34-4c17-9d88-5bdb33155e33"
     frameborder="0"
-    style={{position:"relative",bottom:"30px"}}
+    className={classes.numbersCard}
     width="68%"
-    height="80%"
+    height="95%"
     allowtransparency
 ></iframe>
             </CardHeader>
@@ -74,9 +74,9 @@ export default function Dashboard() {
               <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/4a3c2b1b-232a-410a-ada0-51efc3687473"
     frameborder="0"
-    style={{position:"relative",bottom:"30px"}}
+    className={classes.numbersCard}
     width="68%"
-    height="80%"
+    height="95%"
     allowtransparency
 ></iframe>
             </CardHeader>
