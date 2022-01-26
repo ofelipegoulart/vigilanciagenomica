@@ -41,9 +41,9 @@ export default function Maps() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-<div style={{overflow: "hidden",margin: "30px auto", maxWidth: "100%"}}>
+<div style={{overflow: "auto",margin: "30px auto", maxWidth: "100%"}}>
 <iframe scrolling="no" src="https://microreact.org/project/7gk1SiH76NmqRwQ6a992RS-projeto-covid-sc"
-style={{border: "0px none", marginLeft: "18px", height: "812px", marginTop: "-50px", width: "1200px"}}>
+style={{border: "0px none",height: "812px", marginTop:"-50px", width: "880px"}}>
 </iframe>
 </div>
       </GridContainer>

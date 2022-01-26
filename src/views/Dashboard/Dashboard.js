@@ -108,7 +108,7 @@ export default function Dashboard() {
           <div className={classes.spacing}>&nbsp;
           </div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Distribuição de Variantes pelo Estado</h3>
+            <h3 className={classes.cardTitleWhite}>Distribuição de Variantes em Santa Catarina</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
@@ -144,30 +144,29 @@ export default function Dashboard() {
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
             <iframe
-      src="http://covidsc-api.sites.ufsc.br/public/question/7091bf37-9cde-4d02-ac1d-66c87268cc39"
+      src="http://covidsc-api.sites.ufsc.br/public/question/f37ee0e3-2af6-4f73-9692-ce36866d6ca3"
       frameborder="0"
-      width="100%"
+      width="90%"
       height="450"
       allowtransparency
-      style={{marginTop:"10px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+      style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
       >
   </iframe>
         </Card>
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
       <CardHeader color="info">
-        <h3 className={classes.cardTitleWhite}>Últimos 30 dias</h3>
+        <h3 className={classes.cardTitleWhite}>Última Semana Epidemiológica Analisada</h3>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="https://covidsc-api.sites.ufsc.br/public/question/ddf983ff-3c20-4b32-8f6d-46f7f0e9cdd7"
+    src="http://covidsc-api.sites.ufsc.br/public/question/5c61a755-f388-4b0f-9a09-32b805272819"
     frameborder="0"
     width="100%"
-    height="450"
+    height="405"
     allowtransparency
-    style={{marginTop:"10px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
-    >
-    </iframe>
+    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+    ></iframe>
         </Card>
       </GridItem>
       </GridContainer>
@@ -176,7 +175,7 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;</div>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Volume de Amostras Processadas por Mês</h3>
+            <h3 className={classes.cardTitleWhite}>Volume de Amostras Processadas por Semana Epidemiológica</h3>
           </CardHeader>
             <CardBody>
             </CardBody>
