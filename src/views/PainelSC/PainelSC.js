@@ -50,6 +50,7 @@ export default function PainelSC() {
     </Card>
     </GridItem>
     </GridContainer>
+    <div className={classes.spacing} style={{marginBottom:"10px"}}>&nbsp;</div>
     <GridContainer>
     <GridItem xs={12} sm={12} md={12}>
     <CardHeader color="info">
@@ -66,6 +67,7 @@ export default function PainelSC() {
     </Card>
     </GridItem>
     </GridContainer>
+    <div className={classes.spacing} style={{marginBottom:"10px"}}>&nbsp;</div>
     <GridContainer>
     <GridItem xs={12} sm={12} md={8}>
     <CardHeader color="info">

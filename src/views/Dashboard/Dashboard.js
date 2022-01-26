@@ -156,16 +156,16 @@ export default function Dashboard() {
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
       <CardHeader color="info">
-        <h3 className={classes.cardTitleWhite}>Última Semana Epidemiológica Analisada</h3>
+        <h4 className={classes.cardTitleWhite}>Última Semana Epidemiológica Analisada</h4>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
           <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/5c61a755-f388-4b0f-9a09-32b805272819"
     frameborder="0"
-    width="100%"
-    height="405"
+    width="90%"
+    height="450"
     allowtransparency
-    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+    style={{marginTop:"12px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
     ></iframe>
         </Card>
       </GridItem>
