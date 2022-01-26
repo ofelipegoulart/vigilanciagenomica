@@ -42,7 +42,7 @@ export default function Maps() {
       </GridContainer>
       <GridContainer>
       <div className={classes.containerMap}>
-      <a href="https://microreact.org/project/3jY1MQzTVUsBjw1z7DWBMu-genoma-covid-sc" target="_blank">
+      <a href="https://microreact.org/project/rcRT6SNvcNuqbxRXFSsEPi-projeto-covid-sc" target="_blank">
         <img src={map} className={classes.mapSite}/>
       </a>
       </div>

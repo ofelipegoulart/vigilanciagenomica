@@ -1,10 +1,9 @@
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-];
-
-module.exports = {
-  data,
-}
+import SE41 from "reports/2021_SE41_Report_Semanal_assinado.pdf";
+import SE45 from "reports/2021_SE45_Report_Semanal_Completo_assinado.pdf";
+import SE46 from "reports/2021_SE46_Report_Semanal_Completo_assinado.pdf";
+import SE47 from "reports/2021_SE47_Report_Semanal_assinado.pdf";
+import SE48 from "reports/2021_SE48_Report_Semanal_assinado.pdf";
+import SE49 from "reports/2021_SE49_Report_Semanal_assinado.pdf";
+import SE50 from "reports/2021_SE50_Report_Semanal_assinado.pdf";
+import SE51 from "reports/2021_SE50_Report_Semanal_assinado.pdf";
+import SE52 from "reports/2021_SE52_Report_Semanal_assinado.pdf";
