@@ -41,16 +41,11 @@ export default function Maps() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-      <div className={classes.containerMap}>
-      <a href="https://microreact.org/project/rcRT6SNvcNuqbxRXFSsEPi-projeto-covid-sc" target="_blank">
-        <img src={map} className={classes.mapSite}/>
-      </a>
-      </div>
-      </GridContainer>
-      <GridContainer>
-      <div className={classes.description}>
-      <p>Acesse o mapa clicando na imagem acima.</p>
-      </div>
+<div style={{border: "2px solid #D5CC5A", overflow: "hidden",margin: "15px auto", maxWidth: "575px"}}>
+<iframe scrolling="no" src="https://microreact.org/project/7gk1SiH76NmqRwQ6a992RS-projeto-covid-sc"
+style={{border: "0px none", marginLeft: "-36px", height: "812px", marginTop: "-486px", width: "650px"}}>
+</iframe>
+</div>
       </GridContainer>
     </div>
   );
