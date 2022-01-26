@@ -187,7 +187,7 @@ export default function Dashboard() {
           <Card chart>
           <div className={classes.chartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/04bd787f-b310-4038-80e4-4e1c2882b1c1"
+    src="http://covidsc-api.sites.ufsc.br/public/question/31dd931d-4866-4255-8d5b-28f1619cedcb"
     frameborder="0"
     width="100%"
     height="600"

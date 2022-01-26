@@ -40,16 +40,16 @@ export default function Icons() {
               tableHead={["Ano", "Mês", "Relatório da Semana Epidemiológica"]}
               tableData={[
                 ["2021", "Dezembro", <a href={SE52} target="_blank"> Semana Epidemiológica 52 [em PDF] </a>],
-                ["2021", "Dezembro", <a href="#" target="_blank"> Semana Epidemiológica 51 [em PDF] </a>],
+                ["2021", "Dezembro", "Semana Epidemiológica 51 [em PDF]"],
                 ["2021", "Dezembro", <a href={SE50} target="_blank"> Semana Epidemiológica 50 [em PDF] </a>],
                 ["2021", "Dezembro", <a href={SE49} target="_blank"> Semana Epidemiológica 49 [em PDF] </a>],
                 ["2021", "Novembro", <a href={SE48} target="_blank"> Semana Epidemiológica 48 [em PDF] </a>],
                 ["2021", "Novembro", <a href={SE47} target="_blank"> Semana Epidemiológica 47 [em PDF] </a>],
                 ["2021", "Novembro", <a href={SE46} target="_blank"> Semana Epidemiológica 46 [em PDF] </a>],
                 ["2021", "Novembro", <a href={SE45} target="_blank"> Semana Epidemiológica 45 [em PDF] </a>],
-                ["2021", "Outubro", <a href="#" target="_blank"> Semana Epidemiológica 44 [em PDF] </a>],
-                ["2021", "Outubro", <a href="#" target="_blank"> Semana Epidemiológica 43 [em PDF] </a>],
-                ["2021", "Outubro", <a href="#" target="_blank"> Semana Epidemiológica 42 [em PDF] </a>],
+                ["2021", "Outubro", "Semana Epidemiológica 44 [em PDF]"],
+                ["2021", "Outubro","Semana Epidemiológica 43 [em PDF]"],
+                ["2021", "Outubro", "Semana Epidemiológica 42 [em PDF]"],
                 ["2021", "Outubro", <a href={SE41} target="_blank"> Semana Epidemiológica 41 [em PDF] </a>],
               ]}
             />

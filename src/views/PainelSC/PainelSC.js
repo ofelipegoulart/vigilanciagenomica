@@ -9,35 +9,8 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
-const styles = {
-  cardCategoryWhite: {
-    "&,& a,& a:hover,& a:focus": {
-      color: "rgba(255,255,255,.62)",
-      margin: "0",
-      fontSize: "14px",
-      marginTop: "0",
-      marginBottom: "0",
-    },
-    "& a,& a:hover,& a:focus": {
-      color: "#FFFFFF",
-    },
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "400",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none",
-    "& small": {
-      color: "#777",
-      fontSize: "65%",
-      fontWeight: "400",
-      lineHeight: "1",
-    },
-  },
-};
+import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
+
 
 const useStyles = makeStyles(styles);
 
@@ -45,13 +18,84 @@ export default function PainelSC() {
   const classes = useStyles();
   return (
     <div>
-    <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/dashboard/bd6a02c2-f764-4165-8c28-94ee8f875a28"
+    <GridContainer>
+    <GridItem xs={12} sm={12} md={4}>
+    <CardHeader color="info">
+      <h3 className={classes.cardTitleWhite}>Amostras por Sexo</h3>
+    </CardHeader>
+    <Card chart className={classes.pieChartVariant}>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/fc3d9601-a2a0-47bf-a0ee-2a85447264c7"
     frameborder="0"
-    width="100%"
-    height="700"
+    width="90%"
+    height="450"
     allowtransparency
-    ></iframe>
+    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+    >
+</iframe>
+      </Card>
+    </GridItem>
+    <GridItem xs={12} sm={12} md={8}>
+    <CardHeader color="info">
+      <h3 className={classes.cardTitleWhite}>Sequências por Faixa Etária</h3>
+    </CardHeader>
+    <Card chart className={classes.pieChartVariant}>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/dd6999a0-0b70-4c2b-b8c7-481e8fe4de54"
+    frameborder="0"
+    width="90%"
+    height="450"
+    allowtransparency
+    style={{marginTop:"5px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    </Card>
+    </GridItem>
+    </GridContainer>
+    <GridContainer>
+    <GridItem xs={12} sm={12} md={12}>
+    <CardHeader color="info">
+      <h3 className={classes.cardTitleWhite}>Variantes por Semana Epidemiológica (Total)</h3>
+    </CardHeader>
+    <Card chart className={classes.pieChartVariant}>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/2bd55eb8-dd90-4822-a5d8-50d52654f279"
+    frameborder="0"
+    width="90%"
+    height="450"
+    allowtransparency
+    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    </Card>
+    </GridItem>
+    </GridContainer>
+    <GridContainer>
+    <GridItem xs={12} sm={12} md={8}>
+    <CardHeader color="info">
+      <h3 className={classes.cardTitleWhite}>Sequências por Regional de Saúde</h3>
+    </CardHeader>
+    <Card chart className={classes.pieChartVariant}>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/013ba2a6-19e0-4000-a47a-af736be5c702"
+    frameborder="0"
+    width="90%"
+    height="450"
+    allowtransparency
+    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    </Card>
+    </GridItem>
+    <GridItem xs={12} sm={12} md={4}>
+    <CardHeader color="info">
+      <h4 className={classes.cardTitleWhite}>Municípios Analisados</h4>
+    </CardHeader>
+    <Card chart className={classes.pieChartVariant}>
+          <iframe
+    src="http://covidsc-api.sites.ufsc.br/public/question/07108748-3aee-40b6-bf06-661b2a054737"
+    frameborder="0"
+    width="90%"
+    height="450"
+    allowtransparency
+    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    </Card>
+    </GridItem>
+    </GridContainer>
     </div>
   );
 }
