@@ -28,7 +28,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/fc3d9601-a2a0-47bf-a0ee-2a85447264c7"
     frameborder="0"
     width="90%"
-    height="450"
+    height="100%"
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
     >
@@ -44,7 +44,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/dd6999a0-0b70-4c2b-b8c7-481e8fe4de54"
     frameborder="0"
     width="90%"
-    height="450"
+    height="100%"
     allowtransparency
     style={{marginTop:"5px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
@@ -61,7 +61,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/2bd55eb8-dd90-4822-a5d8-50d52654f279"
     frameborder="0"
     width="90%"
-    height="450"
+    height="100%"
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
@@ -78,7 +78,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/013ba2a6-19e0-4000-a47a-af736be5c702"
     frameborder="0"
     width="90%"
-    height="551"
+    height="550"
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
