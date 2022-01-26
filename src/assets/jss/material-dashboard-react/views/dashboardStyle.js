@@ -106,14 +106,21 @@ const dashboardStyle = {
   },
   numbersCard: {
     position:"relative",
-    bottom:"65px"
+    bottom:"65px",
+    marginBottom:"-20px"
   },
   "@media screen and (min-width:1580px)": {
     numbersCard: {
       position:"relative",
       top:"0px",
+      marginBottom:"auto"
       },
   },
+  "@media screen and (min-width:360px)": {
+    numbersCard: {
+      marginBottom:"auto"
+      },
+    },
 };
 
 export default dashboardStyle;
