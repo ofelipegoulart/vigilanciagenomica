@@ -10,9 +10,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-import Table from "components/Table/Table.js";
 
-import { pesquisadores } from "variables/Tables/SobreProjeto.js";
 import bioinfo from "assets/img/logos/bioinfo.png";
 import ufsc from "assets/img/logos/UFSClogo.png";
 import ses from "assets/img/logos/seslogo.png";

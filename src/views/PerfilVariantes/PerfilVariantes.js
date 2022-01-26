@@ -10,7 +10,6 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-import { data } from "variables/PieData.js";
 
 import styles from "assets/jss/material-dashboard-react/views/variantStyle.js";
 
