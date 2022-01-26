@@ -30,8 +30,8 @@ export default function Icons() {
     <div>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
-        <Card plain>
-          <CardHeader plain color="info">
+        <Card chart>
+          <CardHeader color="info">
             <h1>Relatórios Técnicos</h1>
           </CardHeader>
           <CardBody style={{marginTop:"30px"}}>

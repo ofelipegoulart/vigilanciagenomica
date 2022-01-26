@@ -48,8 +48,8 @@ export default function PainelSC() {
     <iframe
     src="http://covidsc-api.sites.ufsc.br/public/dashboard/bd6a02c2-f764-4165-8c28-94ee8f875a28"
     frameborder="0"
-    width="800"
-    height="600"
+    width="100%"
+    height="700"
     allowtransparency
     ></iframe>
     </div>
