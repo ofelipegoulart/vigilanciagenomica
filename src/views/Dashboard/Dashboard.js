@@ -14,20 +14,6 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-const jwt = require("jsonwebtoken");
-
-const METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
-const METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
-
-const payload = {
-  resource: { question: 13 },
-  params: {},
-  exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
-};
-const token = jwt.sign(payload, METABASE_SECRET_KEY);
-
-const iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=false&titled=false";
-
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -46,9 +32,9 @@ export default function Dashboard() {
               <iframe
                 src="http://covidsc-api.sites.ufsc.br/public/question/855a77e1-52f1-4cc6-8d29-53559c8a3c0d"
                 frameborder="0"
-                style={{marginTop:"5px"}}
-                width="250"
-                height="200"
+                style={{position:"relative",bottom:"30px"}}
+                width="68%"
+                height="80%"
                 allowtransparency
             ></iframe>
             </CardHeader>
@@ -67,9 +53,9 @@ export default function Dashboard() {
               <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/0c2302b9-2c34-4c17-9d88-5bdb33155e33"
     frameborder="0"
-    style={{marginTop:"5px"}}
-    width="250"
-    height="200"
+    style={{position:"relative",bottom:"30px"}}
+    width="68%"
+    height="80%"
     allowtransparency
 ></iframe>
             </CardHeader>
@@ -88,9 +74,9 @@ export default function Dashboard() {
               <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/4a3c2b1b-232a-410a-ada0-51efc3687473"
     frameborder="0"
-    style={{marginTop:"5px"}}
-    width="250"
-    height="200"
+    style={{position:"relative",bottom:"30px"}}
+    width="68%"
+    height="80%"
     allowtransparency
 ></iframe>
             </CardHeader>
@@ -101,8 +87,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
       </GridContainer>
-
-
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <div className={classes.spacing}>&nbsp;
@@ -189,8 +173,10 @@ export default function Dashboard() {
           <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/31dd931d-4866-4255-8d5b-28f1619cedcb"
     frameborder="0"
-    width="100%"
-    height="600"
+    style={{marginLeft:"100px"}}
+    width="80%"
+    height="400"
+
     allowtransparency
     >
     </iframe>

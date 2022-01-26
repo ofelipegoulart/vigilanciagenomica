@@ -13,7 +13,6 @@
     "dayjs": "^1.10.7",
     "dotenv": "^10.0.0",
     "history": "5.0.0",
-    "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "node-env-run": "^4.0.2",
     "nookies": "^2.5.2",
