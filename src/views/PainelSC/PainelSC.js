@@ -56,7 +56,7 @@ export default function PainelSC() {
     <CardHeader color="info">
       <h3 className={classes.cardTitleWhite}>Variantes por Semana Epidemiológica (Total)</h3>
     </CardHeader>
-    <Card chart className={classes.pieChartVariant}>
+    <Card chart>
           <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/2bd55eb8-dd90-4822-a5d8-50d52654f279"
     frameborder="0"
@@ -78,7 +78,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/013ba2a6-19e0-4000-a47a-af736be5c702"
     frameborder="0"
     width="90%"
-    height="450"
+    height="550"
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
@@ -92,7 +92,7 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/07108748-3aee-40b6-bf06-661b2a054737"
     frameborder="0"
     width="90%"
-    height="450"
+    height="550"
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
