@@ -78,7 +78,11 @@ export default function PainelSC() {
     src="http://covidsc-api.sites.ufsc.br/public/question/013ba2a6-19e0-4000-a47a-af736be5c702"
     frameborder="0"
     width="90%"
+<<<<<<< HEAD
     height="550"
+=======
+    height="100%"
+>>>>>>> d25c32514ec13ee871d49532555886ee3a37c51d
     allowtransparency
     style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
