@@ -56,7 +56,7 @@ export default function PainelSC() {
     <CardHeader color="info">
       <h3 className={classes.cardTitleWhite}>Variantes por Semana Epidemiológica (Total)</h3>
     </CardHeader>
-    <Card chart>
+    <Card chart style={{marginTop:"-40px"}}>
           <iframe
     src="http://covidsc-api.sites.ufsc.br/public/question/2bd55eb8-dd90-4822-a5d8-50d52654f279"
     frameborder="0"
