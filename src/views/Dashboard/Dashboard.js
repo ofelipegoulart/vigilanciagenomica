@@ -24,7 +24,7 @@ export default function Dashboard() {
     <div>
       <GridContainer>
         <GridItem xs={12} sm={6} md={4}>
-          <Card>
+          <Card >
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
                 <Icon>search</Icon>
@@ -34,7 +34,7 @@ export default function Dashboard() {
                 frameborder="0"
                 className={classes.numbersCard}
                 width="68%"
-                height="95%"
+                height="90%"
                 allowtransparency
             ></iframe>
             </CardHeader>
@@ -55,7 +55,7 @@ export default function Dashboard() {
     frameborder="0"
     className={classes.numbersCard}
     width="68%"
-    height="95%"
+    height="90%"
     allowtransparency
 ></iframe>
             </CardHeader>
@@ -76,7 +76,7 @@ export default function Dashboard() {
     frameborder="0"
     className={classes.numbersCard}
     width="68%"
-    height="95%"
+    height="90%"
     allowtransparency
 ></iframe>
             </CardHeader>
@@ -124,7 +124,7 @@ export default function Dashboard() {
       <GridContainer>
       <GridItem xs={12} sm={12} md={6}>
       <CardHeader color="info">
-        <h3 className={classes.cardTitleWhite}>Total</h3>
+        <h4 className={classes.cardTitleWhite}>Total</h4>
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
             <iframe

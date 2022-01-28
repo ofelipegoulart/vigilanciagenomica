@@ -107,18 +107,30 @@ const dashboardStyle = {
   numbersCard: {
     position:"relative",
     bottom:"65px",
-    marginBottom:"-20px"
+    height:"171px",
   },
   "@media screen and (min-width:1580px)": {
     numbersCard: {
       position:"relative",
       top:"0px",
-      marginBottom:"auto"
+      height:"180px",
+      marginBottom:"-60px"
+      },
+  },
+  "@media screen and (min-width:1280px)": {
+    numbersCard: {
+      height:"180px",
       },
   },
   "@media screen and (min-width:360px)": {
     numbersCard: {
       marginBottom:"auto"
+      },
+    },
+  "@media screen and (min-width:500px) and (max-width:1080px)": {
+    numbersCard: {
+      position:"relative",
+      top:"0px"
       },
     },
 };
