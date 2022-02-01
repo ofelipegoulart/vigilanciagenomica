@@ -54,39 +54,50 @@ VOCs e seus contatos e casos relacionados a surtos. </p>
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <CardHeader color="info">
-          <h3 className={classes.cardTitleWhite}>Participantes da Rede</h3>
+          <h3 className={classes.cardTitleWhite}>Suporte Financeiro</h3>
         </CardHeader>
         </GridItem>
         </GridContainer>
         <div className={classes.cardLogos}>
         <GridContainer>
         <Card chart>
-        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", height:"200px",marginTop:"90px"}}>
+        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", height:"200px",marginTop:"90px", marginBottom:"30px"}}>
         <img src={ses} style={{height:"160px"}}/>
         <img src={fapesc} style={{marginLeft:"30px", height:"180px"}} />
-        <img src={ufsc} style={{marginLeft:"30px", height:"210px"}}/>
-        <img src={bioinfo} style={{marginLeft:"30px",height:"200px"}} />
-        </GridItem>
-        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"200px"}}>
-        <img src={nubioinfo} style={{marginLeft:"30px", height:"190px", margin:"0"}}/>
-        <img src={lbmms} style={{ height:"210px"}}/>
-        <img src={lva} style={{marginLeft:"30px",height:"190px"}}/>
         <img src={capes} style={{marginLeft:"30px", height:"180px"}}/>
-        </GridItem>
-        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
-        <img src={biomehub} style={{marginLeft:"30px", height:"200px"}}/>
-        <img src={lacen} style={{marginLeft:"30px",height:"210px"}}/>
-        <img src={dive} style={{marginLeft:"30px", height:"185px"}}/>
-        <img src={ifsc} style={{marginLeft:"30px", height:"200px"}}/>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
-        <img src={fiocruz} style={{marginLeft:"-15px", width:"290px"}}/>
-        <img src={vigilanciasaude} style={{marginRight:"0px", marginBottom:"30px",marginTop:"30px",height:"140px"}}/>
-        <img src={genolab} style={{marginLeft:"30px", marginBottom:"60px",marginTop:"60px",width:"230px"}}/>
         </GridItem>
         </Card>
         </GridContainer>
         </div>
-    </div>
+        <div style={{marginTop:"30px"}}>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <CardHeader color="info">
+              <h3 className={classes.cardTitleWhite}>Participantes da Rede</h3>
+            </CardHeader>
+            </GridItem>
+            </GridContainer>
+            <GridContainer>
+            <Card chart style={{marginTop:"-35px"}}>
+        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"200px"}}>
+        <img src={ufsc} style={{paddingRight:"30px", height:"200px"}}/>
+        <img src={bioinfo} style={{paddingRight:"30px",height:"200px"}} />
+        <img src={dive} style={{paddingLeft:"30px", height:"185px"}}/>
+        <img src={lacen} style={{paddingLeft:"30px",height:"200px"}}/>
+        </GridItem>
+        <GridItem xs={10} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
+        <img src={biomehub} style={{ height:"200px"}}/>
+        <img src={ifsc} style={{height:"200px"}}/>
+        <img src={nubioinfo} style={{ height:"190px"}}/>
+        <img src={lbmms} style={{height:"210px"}}/>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={12} style={{textAlign:"center", marginTop:"60px", height:"230px", marginBottom:"30px"}}>
+        <img src={lva} style={{height:"190px"}}/>
+        <img src={vigilanciasaude} style={{paddingLeft:"30px", marginBottom:"30px",marginTop:"30px",height:"140px"}}/>
+        </GridItem>
+        </Card>
+        </GridContainer>
+        </div>
+        </div>
   );
 }

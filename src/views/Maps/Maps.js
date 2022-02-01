@@ -45,7 +45,12 @@ export default function Maps() {
 style={{border: "0px none",height: "812px", marginTop:"-50px", width: "880px"}}>
 </iframe>
 </div>
+<div>
+  </div>
       </GridContainer>
+      <div style={{width:"100%",textAlign:"center"}}>
+      <a href="https://microreact.org/project/7gk1SiH76NmqRwQ6a992RS-projeto-covid-sc" target="_blank">Link para o mapa completo</a>
+      </div>
     </div>
   );
 };
