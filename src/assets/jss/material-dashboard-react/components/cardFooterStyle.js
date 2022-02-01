@@ -21,7 +21,8 @@ const cardFooterStyle = {
     backgroundColor: "transparent",
   },
   cardFooterStats: {
-    marginTop: "10px",
+    borderTop: "1px solid " + grayColor[10],
+    marginTop: "20px",
     "& svg": {
       position: "relative",
       top: "4px",
@@ -40,26 +41,6 @@ const cardFooterStyle = {
   },
   cardFooterChart: {
     borderTop: "1px solid " + grayColor[10],
-  },
-  "@media screen and (min-width:1366px)": {
-    cardFooterStats: {
-      marginTop: "-10px",
-    },
-  },
-  "@media screen and (min-width:1600px)": {
-    cardFooterStats: {
-      marginTop: "-10px",
-    },
-  },
-  "@media screen and (min-width:1280px)": {
-    cardFooterStats: {
-      marginTop: "-40px",
-    },
-  },
-  "@media screen and (min-width:1280px)": {
-    cardFooterStats: {
-      marginTop: "-40px",
-    },
   },
 };
 
