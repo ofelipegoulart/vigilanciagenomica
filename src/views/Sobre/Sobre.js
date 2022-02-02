@@ -26,6 +26,7 @@ import biomehub from "assets/img/logos/biomehublogo.png";
 import genolab from "assets/img/logos/genolablogo.png";
 import vigilanciasaude from "assets/img/logos/vigilanciasaudelogo.png";
 import fiocruz from "assets/img/logos/fiocruzlogo.jpg";
+
 import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
 
 const useStyles = makeStyles(styles);

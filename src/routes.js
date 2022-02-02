@@ -1,6 +1,4 @@
 import { BrowserRouter, Router, Switch, Redirect } from "react-router-dom";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 // core components/views for Admin layout
 import Dashboard from "views/Dashboard/Dashboard.js";
