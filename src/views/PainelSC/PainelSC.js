@@ -11,8 +11,37 @@ import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
-
 const useStyles = makeStyles(styles);
+var amostras_sexo = "";
+var sequencia_faixa_etaria = "";
+var variante_por_semana = "";
+var sequencias_regional_saude = "";
+var municipios_analisados = "";
+
+function getIframeURL(question_id) {
+       var jwt = require("jsonwebtoken");
+       var METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
+       var METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
+       var payload = {
+           resource: { question: question_id },
+           params: {},
+           // exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
+           exp: Math.round(Date.now() / 1000) + (100) // 10 minute expiration
+       };
+       var token = jwt.sign(payload, METABASE_SECRET_KEY);
+       var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=false&titled=false";
+       return iframeUrl;
+ }
+
+ function loadIframes() {
+   amostras_sexo = getIframeURL(23);
+   sequencia_faixa_etaria = getIframeURL(24);
+   variante_por_semana = getIframeURL(17);
+   sequencias_regional_saude = getIframeURL(25);
+   municipios_analisados = getIframeURL(26);
+    }
+
+    loadIframes();
 
 export default function PainelSC() {
   const classes = useStyles();
@@ -25,12 +54,12 @@ export default function PainelSC() {
     </CardHeader>
     <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/fc3d9601-a2a0-47bf-a0ee-2a85447264c7"
+    src={amostras_sexo}
     frameborder="0"
     width="90%"
     height="450"
     allowtransparency
-    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+    style={{marginTop:"30px",marginBottom:"30px", marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
     >
 </iframe>
       </Card>
@@ -41,12 +70,12 @@ export default function PainelSC() {
     </CardHeader>
     <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/dd6999a0-0b70-4c2b-b8c7-481e8fe4de54"
+    src={sequencia_faixa_etaria}
     frameborder="0"
     width="90%"
     height="450"
     allowtransparency
-    style={{marginTop:"5px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    style={{marginTop:"60px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
     </GridItem>
     </GridContainer>
@@ -58,12 +87,12 @@ export default function PainelSC() {
     </CardHeader>
     <Card chart style={{marginTop:"-40px"}}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/2bd55eb8-dd90-4822-a5d8-50d52654f279"
+    src={variante_por_semana}
     frameborder="0"
     width="90%"
     height="450"
     allowtransparency
-    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    style={{marginTop:"60px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
     </GridItem>
     </GridContainer>
@@ -75,12 +104,12 @@ export default function PainelSC() {
     </CardHeader>
     <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/013ba2a6-19e0-4000-a47a-af736be5c702"
+    src={sequencias_regional_saude}
     frameborder="0"
     width="90%"
     height="550"
     allowtransparency
-    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    style={{marginTop:"60px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
     </GridItem>
     <GridItem xs={12} sm={12} md={4}>
@@ -89,12 +118,12 @@ export default function PainelSC() {
     </CardHeader>
     <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/07108748-3aee-40b6-bf06-661b2a054737"
+    src={municipios_analisados}
     frameborder="0"
     width="90%"
     height="550"
     allowtransparency
-    style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
+    style={{marginTop:"45px",marginBottom:"25px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}></iframe>
     </Card>
     </GridItem>
     </GridContainer>

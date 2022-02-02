@@ -1,5 +1,5 @@
 import React from "react";
-import {  Area, AreaChart, Bar, Brush, CartesianGrid, Cell, ComposedChart, Legend, PieChart, Pie, ResponsiveContainer, Scatter, Tooltip, XAxis, YAxis } from "recharts";
+import Iframe from 'react-iframe';
 
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -20,6 +20,35 @@ export default function Dashboard() {
   function getIframe() {
     console.log(iframeUrl);
   }
+
+  function getIframeURL(question_id) {
+         var jwt = require("jsonwebtoken");
+         var METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
+         var METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
+         var payload = {
+             resource: { question: question_id },
+             params: {},
+             // exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
+             exp: Math.round(Date.now() / 1000) + (100) // 10 minute expiration
+         };
+         var token = jwt.sign(payload, METABASE_SECRET_KEY);
+         var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=false&titled=false";
+         return iframeUrl;
+ }
+
+var variantes_semana = "";
+var variantes_identificadas = "";
+var variantes_ultima_semana = "";
+var volume_amostras_processadas = "";
+
+ function loadIframes() {
+        variantes_semana = getIframeURL(9);
+        variantes_identificadas = getIframeURL(4);
+        variantes_ultima_semana = getIframeURL(16);
+        volume_amostras_processadas = getIframeURL(11);
+    }
+
+    loadIframes();
 
   const mapa = new Map();
     var total_municipios_analisados = "0";
@@ -44,20 +73,7 @@ export default function Dashboard() {
                     document.getElementById('total_variantes_identificadas').innerHTML = total_variantes_identificadas;
                     document.getElementById('total_amostras_analisadas').innerHTML = total_amostras_analisadas;
                     document.getElementById('total_municipios_analisados').innerHTML = total_municipios_analisados;
-                    var jwt = require("jsonwebtoken");
 
-    var METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
-    var METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
-
-var payload = {
-  resource: { question: 3 },
-  params: {},
-  exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
-};
-var token = jwt.sign(payload, METABASE_SECRET_KEY);
-
-var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=false&titled=false";
-console.log(iframeUrl);
                  });
             }).catch(function(err) {
                 console.error('Erro ao carregar totais', err);
@@ -93,7 +109,6 @@ console.log(iframeUrl);
           </CardIcon>
           <p className={classes.cardCategory}>Número de Amostras Analisadas</p>
           <h3 className={classes.cardTitle} id="total_amostras_analisadas">
-          <small>amostras</small>
           </h3>
         </CardHeader>
         <CardFooter stats>
@@ -110,7 +125,6 @@ console.log(iframeUrl);
           </CardIcon>
           <p className={classes.cardCategory}>Número de Municípios Analisados</p>
           <h3 className={classes.cardTitle} id="total_municipios_analisados">
-          <small>municípios</small>
           </h3>
         </CardHeader>
         <CardFooter stats>
@@ -137,12 +151,12 @@ console.log(iframeUrl);
         <GridItem xs={12} sm={12} md={12}>
           <Card chart>
             <iframe
-      src="http://covidsc-api.sites.ufsc.br/public/question/56d35422-31b7-4661-8ce6-63694f52c804"
-      frameborder="0"
-      width="100%"
-      height="600"
-      allowtransparency
-      style={{marginTop:"40px",marginLeft:"auto",marginRight:"auto"}}
+            src={variantes_semana}
+            frameborder="0"
+            width="100%"
+            height="600"
+            allowtransparency
+            style={{marginTop:"60px"}}
   ></iframe>
           </Card>
         </GridItem>
@@ -162,12 +176,12 @@ console.log(iframeUrl);
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
             <iframe
-      src="http://covidsc-api.sites.ufsc.br/public/question/f37ee0e3-2af6-4f73-9692-ce36866d6ca3"
+      src={variantes_identificadas}
       frameborder="0"
       width="90%"
       height="450"
       allowtransparency
-      style={{marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+      style={{marginTop:"30px", marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
       >
   </iframe>
         </Card>
@@ -178,13 +192,13 @@ console.log(iframeUrl);
       </CardHeader>
       <Card chart className={classes.pieChartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/5c61a755-f388-4b0f-9a09-32b805272819"
-    frameborder="0"
-    width="90%"
-    height="450"
-    allowtransparency
-    style={{marginTop:"12px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
-    ></iframe>
+          src={variantes_ultima_semana}
+          frameborder="0"
+          width="90%"
+          height="450"
+          allowtransparency
+          style={{marginTop:"30px",marginLeft:"auto",marginRight:"auto",scroll:"hidden"}}
+          ></iframe>
         </Card>
       </GridItem>
       </GridContainer>
@@ -205,15 +219,15 @@ console.log(iframeUrl);
           <Card chart>
           <div className={classes.chartVariant}>
           <iframe
-    src="http://covidsc-api.sites.ufsc.br/public/question/31dd931d-4866-4255-8d5b-28f1619cedcb"
-    frameborder="0"
-    style={{marginLeft:"100px"}}
-    width="80%"
-    height="400"
+          src={volume_amostras_processadas}
+          frameborder="0"
+          style={{marginTop:"30px"}}
+          width="100%"
+          height="400"
 
-    allowtransparency
-    >
-    </iframe>
+          allowtransparency
+          >
+          </iframe>
           </div>
           <div className={classes.spacing}>&nbsp;
           </div>
