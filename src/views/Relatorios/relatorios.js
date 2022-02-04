@@ -22,6 +22,22 @@ import SE52 from "reports/2021_SE52_Report_Semanal_assinado.pdf";
 import Table from "components/Table/Table.js";
 import styles from "assets/jss/material-dashboard-react/views/aboutStyle.js";
 
+var relatorio = getIframeURL(28);
+
+function getIframeURL(question_id) {
+       var jwt = require("jsonwebtoken");
+       var METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
+       var METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
+       var payload = {
+           resource: { question: question_id },
+           params: {},
+           // exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
+           exp: Math.round(Date.now() / 1000) + (100) // 10 minute expiration
+       };
+       var token = jwt.sign(payload, METABASE_SECRET_KEY);
+       var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=false&titled=false";
+       return iframeUrl;
+ }
 const useStyles = makeStyles(styles);
 
 export default function Icons() {
@@ -35,27 +51,20 @@ export default function Icons() {
             <h1>Relatórios Técnicos</h1>
           </CardHeader>
           <CardBody style={{marginTop:"30px"}}>
-          <Table
-              tableHeaderColor="info"
-              tableHead={["Ano", "Mês", "Relatório da Semana Epidemiológica"]}
-              tableData={[
-                ["2021", "Dezembro", <a href={SE52} target="_blank"> Semana Epidemiológica 52 [em PDF] </a>],
-                ["2021", "Dezembro", "Semana Epidemiológica 51 [em PDF]"],
-                ["2021", "Dezembro", <a href={SE50} target="_blank"> Semana Epidemiológica 50 [em PDF] </a>],
-                ["2021", "Dezembro", <a href={SE49} target="_blank"> Semana Epidemiológica 49 [em PDF] </a>],
-                ["2021", "Novembro", <a href={SE48} target="_blank"> Semana Epidemiológica 48 [em PDF] </a>],
-                ["2021", "Novembro", <a href={SE47} target="_blank"> Semana Epidemiológica 47 [em PDF] </a>],
-                ["2021", "Novembro", <a href={SE46} target="_blank"> Semana Epidemiológica 46 [em PDF] </a>],
-                ["2021", "Novembro", <a href={SE45} target="_blank"> Semana Epidemiológica 45 [em PDF] </a>],
-                ["2021", "Outubro", "Semana Epidemiológica 44 [em PDF]"],
-                ["2021", "Outubro","Semana Epidemiológica 43 [em PDF]"],
-                ["2021", "Outubro", "Semana Epidemiológica 42 [em PDF]"],
-                ["2021", "Outubro", <a href={SE41} target="_blank"> Semana Epidemiológica 41 [em PDF] </a>],
-              ]}
-            />
+            <iframe
+            src={relatorio}
+            frameborder="0"
+            width="100%"
+            height="500"
+            allowtransparency
+            style={{alignItems:"center"}}
+            >
+          </iframe>
+
             </CardBody>
             </Card>
             </GridItem></GridContainer>
+
             </div>
   );
 }
