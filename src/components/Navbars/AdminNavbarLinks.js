@@ -10,7 +10,6 @@ export default function AdminNavbarLinks() {
 
   return (
     <div className={classes.navbarLinksContainer}>
-    <a href="/privado" className={classes.linkText}>Acesso Restrito</a><br></br>
       </div>
   );
 }
