@@ -42,15 +42,15 @@ export default function PainelSC() {
     <div>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
+        <Card chart>
           <CardHeader color="info">
-            <h3 className={classes.cardTitleWhite}>Dashboard COVID SC</h3>
+            <h1>Dashboard COVID SC</h1>
           </CardHeader>
-          <Card chart style={{ marginTop: "-40px" }}>
             <iframe
               src={dashboard_iframe}
               frameborder="0"
-              width="100%"
-              height="800px"
+              width="95%"
+              height="1400px"
               allowtransparency
               style={{ marginTop: "60px", marginLeft: "auto", marginRight: "auto" }}></iframe>
           </Card>

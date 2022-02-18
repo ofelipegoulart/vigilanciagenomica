@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from "recharts";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
