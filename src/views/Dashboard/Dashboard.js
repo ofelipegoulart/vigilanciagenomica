@@ -24,7 +24,7 @@ export default function Dashboard() {
   function getIframeURL(question_id) {
          var jwt = require("jsonwebtoken");
          var METABASE_SITE_URL = "http://covidsc-api.sites.ufsc.br";
-         var METABASE_SECRET_KEY = "5b51c410ec9e620a28e9cc18d855f9f021e88c83a07773b327262dda5e007b36";
+         var METABASE_SECRET_KEY = "";
          var payload = {
              resource: { question: question_id },
              params: {},
@@ -56,7 +56,7 @@ var volume_amostras_processadas = "";
     var total_variantes_identificadas = "0";
 
     function loadTotals() {
-        const url = 'http://covidsc-api.sites.ufsc.br/public/question/d3cd437c-1e58-4259-bae7-8399f439ce3a.json';
+        const url = '';
         fetch(url)
            .then(function(response){
                 response.json().then(data => {
